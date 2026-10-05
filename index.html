@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
+    <!-- Firebase App (Core) dan Realtime Database -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karang Taruna 8Vibes - Sememi RT 08</title>
@@ -12,6 +15,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Firebase App SDK (add service SDKs and project config when needed) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script>
+        // Konfigurasi Firebase Anda
+        const firebaseConfig = {
+            apiKey: "AIzaSyDdBPSKT9Hy1QrkVo5zKQ9D927R_dxbILI",
+            authDomain: "vibes-7057e.firebaseapp.com",
+            databaseURL: "https://vibes-7057e-default-rtdb.firebaseio.com",
+            projectId: "vibes-7057e",
+            storageBucket: "vibes-7057e.firebasestorage.app",
+            messagingSenderId: "562362878259",
+            appId: "1:562362878259:web:a565026ef03b325d561646"
+        };
+
+        // Inisialisasi Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+    </script>
     
     <script>
         tailwind.config = {
@@ -999,23 +1021,61 @@
             isAdminLoggedIn: false
         };
 
-        /* Load State from LocalStorage or Load Defaults */
+        /* Load State from Firebase or Load Defaults */
         function loadApplicationState() {
-            state.org = JSON.parse(localStorage.getItem('8vibes_org')) || DEFAULT_ORG;
-            state.news = JSON.parse(localStorage.getItem('8vibes_news')) || DEFAULT_NEWS;
-            state.gallery = JSON.parse(localStorage.getItem('8vibes_gallery')) || DEFAULT_GALLERY;
-            state.donations = JSON.parse(localStorage.getItem('8vibes_donations')) || DEFAULT_DONATIONS;
-            state.settings = JSON.parse(localStorage.getItem('8vibes_settings')) || DEFAULT_SETTINGS;
             state.isAdminLoggedIn = localStorage.getItem('8vibes_admin_logged') === 'true';
 
-            renderPublicWebsite();
-            renderAdminDashboard();
+            db.ref('app_data').on('value', (snapshot) => {
+                const data = snapshot.val();
+
+                if (data) {
+                    state.org = data.orgStructure || [...DEFAULT_ORG];
+                    state.news = data.newsList || [...DEFAULT_NEWS];
+                    state.gallery = data.galleryList || [...DEFAULT_GALLERY];
+                    state.donations = data.donationsList || { ...DEFAULT_DONATIONS };
+                    state.settings = {
+                        ...DEFAULT_SETTINGS,
+                        ...(data.settings || {}),
+                        ...(data.hero || {})
+                    };
+                } else {
+                    state.org = [...DEFAULT_ORG];
+                    state.news = [...DEFAULT_NEWS];
+                    state.gallery = [...DEFAULT_GALLERY];
+                    state.donations = { ...DEFAULT_DONATIONS };
+                    state.settings = { ...DEFAULT_SETTINGS };
+                }
+
+                renderPublicWebsite();
+                renderAdminDashboard();
+            }, (error) => {
+                console.error('Gagal memuat data dari Firebase:', error);
+                showToast('Gagal memuat data dari Firebase.');
+            });
         }
 
         function saveStateToStorage(key, data) {
             localStorage.setItem(key, JSON.stringify(data));
             renderPublicWebsite();
             renderAdminDashboard();
+
+            const payload = {
+                orgStructure: state.org,
+                newsList: state.news,
+                galleryList: state.gallery,
+                donationsList: state.donations,
+                hero: state.settings,
+                lastUpdated: new Date().toISOString()
+            };
+
+            db.ref('app_data').set(payload)
+                .then(() => {
+                    console.log('Data berhasil diperbarui untuk semua user!');
+                })
+                .catch((error) => {
+                    console.error('Gagal menyimpan ke Firebase:', error);
+                    alert('Gagal menyimpan data ke server.');
+                });
         }
 
         /* RENDER PUBLIC WEBSITE */
