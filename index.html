@@ -1,39 +1,12 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
-    <!-- Firebase App (Core) dan Realtime Database -->
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karang Taruna 8Vibes - Sememi RT 08</title>
-    <!-- Tailwind CSS -->
+    <title>Karang Taruna 8vibes - Portal Resmi & Transparent Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Firebase App SDK (add service SDKs and project config when needed) -->
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
-    <script>
-        // Konfigurasi Firebase Anda
-        const firebaseConfig = {
-            apiKey: "AIzaSyDdBPSKT9Hy1QrkVo5zKQ9D927R_dxbILI",
-            authDomain: "vibes-7057e.firebaseapp.com",
-            databaseURL: "https://vibes-7057e-default-rtdb.firebaseio.com",
-            projectId: "vibes-7057e",
-            storageBucket: "vibes-7057e.firebasestorage.app",
-            messagingSenderId: "562362878259",
-            appId: "1:562362878259:web:a565026ef03b325d561646"
-        };
-
-        // Inisialisasi Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.database();
-    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -41,1619 +14,1374 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#fff1f2',
-                            100: '#ffe4e6',
-                            200: '#fecdd3',
-                            600: '#9f1239',
-                            700: '#881337', // Deep Maroon / Crimson (Match shirt)
-                            800: '#6b0d2b',
-                            900: '#4c0519',
-                        },
-                        gold: {
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                            600: '#d97706',
+                            50: '#fef2f2',
+                            100: '#ffe1e1',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                            700: '#b91c1c',
+                            800: '#991b1b',
+                            900: '#7f1d1d',
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        heading: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-
     <style>
-        /* Modern Abstract Motif Pattern on White Background */
-        .bg-pattern {
-            background-color: #ffffff;
-            background-image: radial-gradient(#881337 0.75px, transparent 0.75px), radial-gradient(#881337 0.75px, #ffffff 0.75px);
-            background-size: 32px 32px;
-            background-position: 0 0, 16px 16px;
-            background-opacity: 0.04;
+        body {
+            background-color: #fafafa;
+            background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+            background-size: 28px 28px;
         }
-
-        .bg-subtle-grid {
-            background-image: linear-gradient(to right, rgba(136, 19, 55, 0.03) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(136, 19, 55, 0.03) 1px, transparent 1px);
-            background-size: 24px 24px;
-        }
-
-        /* Glassmorphic Navigation */
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.94);
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
         }
 
-        /* Custom Scrollbar */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #881337;
-            border-radius: 4px;
-        }
-
-        /* Line Clamping */
         .line-clamp-2 {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dc2626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #991b1b;
+        }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-gray-50 bg-pattern antialiased custom-scrollbar min-h-screen flex flex-col justify-between">
+<body class="font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between selection:bg-brand-600 selection:text-white relative">
 
-    <!-- PUBLIC HEADER / NAVBAR -->
-    <header class="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-rose-100 shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                
-                <!-- Logo & Branding -->
-                <a href="#beranda" class="flex items-center space-x-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center text-white shadow-md shadow-brand-700/20 group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-solid fa-users-rays text-xl text-gold-400"></i>
-                    </div>
-                    <div>
-                        <div class="flex items-center space-x-2">
-                            <span class="font-heading font-extrabold text-xl text-gray-900 tracking-tight" id="site-logo-text">8Vibes</span>
-                            <span class="bg-brand-100 text-brand-800 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-brand-200" id="site-rt-text">Sememi RT 08</span>
-                        </div>
-                        <p class="text-xs text-gray-500 font-medium">Karang Taruna Pemuda Pemudi</p>
-                    </div>
-                </a>
-
-                <!-- Desktop Nav Links -->
-                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
-                    <a href="#beranda" class="px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-brand-700 hover:bg-rose-50/60 transition">Beranda</a>
-                    <a href="#struktur" class="px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-brand-700 hover:bg-rose-50/60 transition">Struktur</a>
-                    <a href="#berita" class="px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-brand-700 hover:bg-rose-50/60 transition">Berita</a>
-                    <a href="#galeri" class="px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-brand-700 hover:bg-rose-50/60 transition">Galeri</a>
-                    <a href="#donasi" class="px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-brand-700 hover:bg-rose-50/60 transition">Donasi</a>
-                    <a href="#kontak" class="px-3 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:text-brand-700 hover:bg-rose-50/60 transition">Kontak</a>
-                </nav>
-
-                <!-- CTA & Admin Buttons -->
-                <div class="hidden md:flex items-center space-x-3">
-                    <button onclick="toggleAdminModal()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center space-x-1.5 border border-gray-300">
-                        <i class="fa-solid fa-user-gear text-brand-700"></i>
-                        <span>Admin</span>
-                    </button>
-                    <a href="#donasi" class="bg-brand-700 hover:bg-brand-800 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-md shadow-brand-700/20 hover:shadow-lg hover:shadow-brand-700/30 transition duration-300 flex items-center space-x-2">
-                        <i class="fa-solid fa-heart text-xs text-rose-300"></i>
-                        <span>Dukung Kami</span>
-                    </a>
+    <header class="sticky top-0 z-40 w-full glass-card border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-700 to-brand-500 p-0.5 shadow-md shadow-brand-600/20 group-hover:scale-105 transition-transform duration-300">
+                    <img id="app-logo" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=120&q=80" alt="Logo 8vibes" class="w-full h-full object-cover rounded-[14px]">
                 </div>
-
-                <!-- Mobile Hamburger Button -->
-                <div class="md:hidden flex items-center space-x-2">
-                    <button onclick="toggleAdminModal()" class="p-2 text-xs font-bold text-gray-700 bg-gray-100 rounded-lg">
-                        <i class="fa-solid fa-user-gear"></i>
-                    </button>
-                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-gray-600 hover:text-brand-700 hover:bg-rose-50 focus:outline-none">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">8VIBES</span>
+                    <span class="text-[10px] font-extrabold text-brand-600 tracking-widest uppercase">Karang Taruna</span>
                 </div>
-            </div>
-        </div>
+            </a>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-2 shadow-xl">
-            <a href="#beranda" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-rose-50 hover:text-brand-700">Beranda</a>
-            <a href="#struktur" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-rose-50 hover:text-brand-700">Struktur Organisasi</a>
-            <a href="#berita" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-rose-50 hover:text-brand-700">Berita & Kegiatan</a>
-            <a href="#galeri" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-rose-50 hover:text-brand-700">Galeri Foto</a>
-            <a href="#donasi" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-rose-50 hover:text-brand-700">Donasi Program</a>
-            <a href="#kontak" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-gray-700 hover:bg-rose-50 hover:text-brand-700">Kontak & Lokasi</a>
-            <div class="pt-2">
-                <a href="#donasi" class="block text-center w-full bg-brand-700 text-white font-semibold py-2.5 rounded-xl shadow-md">
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-6 text-sm font-semibold text-slate-700">
+                <a href="#hero" class="hover:text-brand-600 px-3 py-2 rounded-xl transition-colors">Beranda</a>
+                <a href="#struktur" class="hover:text-brand-600 px-3 py-2 rounded-xl transition-colors">Struktur</a>
+                <a href="#berita" class="hover:text-brand-600 px-3 py-2 rounded-xl transition-colors">Berita</a>
+                <a href="#dokumentasi" class="hover:text-brand-600 px-3 py-2 rounded-xl transition-colors">Dokumentasi</a>
+                <a href="#donasi" class="hover:text-brand-600 px-3 py-2 rounded-xl transition-colors">Donasi</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-3">
+                <button onclick="promptAdminLogin()" class="px-4 py-2.5 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-300 border border-slate-300/80 rounded-xl flex items-center gap-2 transition-all hover:shadow-sm">
+                    <i class="fa-solid fa-user-shield text-brand-600 text-sm"></i> Panel Admin
+                </button>
+                <a href="#donasi" class="px-5 py-2.5 text-xs font-bold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 rounded-xl shadow-md shadow-brand-600/30 hover:shadow-lg hover:shadow-brand-600/40 transition-all hover:-translate-y-0.5">
                     Donasi Sekarang
                 </a>
+            </div>
+
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2.5 text-slate-700 hover:text-brand-600 hover:bg-slate-100 rounded-xl transition-colors">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block px-4 py-2.5 text-slate-700 hover:bg-brand-50 hover:text-brand-600 rounded-xl font-semibold">Beranda</a>
+            <a href="#struktur" onclick="toggleMobileMenu()" class="block px-4 py-2.5 text-slate-700 hover:bg-brand-50 hover:text-brand-600 rounded-xl font-semibold">Struktur Organisasi</a>
+            <a href="#berita" onclick="toggleMobileMenu()" class="block px-4 py-2.5 text-slate-700 hover:bg-brand-50 hover:text-brand-600 rounded-xl font-semibold">Berita & Pengumuman</a>
+            <a href="#dokumentasi" onclick="toggleMobileMenu()" class="block px-4 py-2.5 text-slate-700 hover:bg-brand-50 hover:text-brand-600 rounded-xl font-semibold">Galeri Dokumentasi</a>
+            <a href="#donasi" onclick="toggleMobileMenu()" class="block px-4 py-2.5 text-slate-700 hover:bg-brand-50 hover:text-brand-600 rounded-xl font-semibold">Donasi Kegiatan</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <button onclick="toggleMobileMenu(); promptAdminLogin();" class="w-full text-center py-2.5 text-xs font-bold text-slate-700 bg-slate-100 rounded-xl border border-slate-300">
+                    <i class="fa-solid fa-user-shield text-brand-600 mr-2"></i> Akses Panel Admin
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="beranda" class="pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden bg-subtle-grid">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Content -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 bg-rose-50 border border-brand-200 px-3.5 py-1.5 rounded-full shadow-sm">
-                        <span class="w-2.5 h-2.5 rounded-full bg-brand-700 animate-pulse"></span>
-                        <span class="text-xs font-bold uppercase tracking-wider text-brand-800" id="hero-badge-text">Karang Taruna Sememi RT 08</span>
-                    </div>
-
-                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight" id="hero-title">
-                        Wadah Inovasi & <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 via-rose-700 to-brand-900">Aksi Pemuda</span> 8Vibes
-                    </h1>
-
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed" id="hero-subtitle">
-                        Menggerakkan potensi generasi muda RT 08 Sememi melalui kegiatan sosial, olahraga, kreasi seni, dan kerja bakti lingkungan menuju masyarakat yang solid dan sejahtera.
-                    </p>
-
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#berita" class="w-full sm:w-auto bg-brand-700 hover:bg-brand-800 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-brand-700/25 transition duration-300 text-center flex items-center justify-center space-x-2">
-                            <span>Lihat Agenda Kegiatan</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#donasi" class="w-full sm:w-auto bg-white hover:bg-rose-50 text-brand-800 font-bold px-7 py-3.5 rounded-xl border border-brand-200 shadow-sm transition duration-300 text-center flex items-center justify-center space-x-2">
-                            <i class="fa-solid fa-hand-holding-heart text-brand-700"></i>
-                            <span>Dukung Program</span>
-                        </a>
-                    </div>
-
-                    <!-- Live Stat Counters -->
-                    <div class="pt-8 border-t border-gray-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
-                        <div>
-                            <p class="font-heading text-3xl font-extrabold text-brand-800" id="stat-members-count">45+</p>
-                            <p class="text-xs sm:text-sm font-medium text-gray-500">Anggota Aktif</p>
-                        </div>
-                        <div>
-                            <p class="font-heading text-3xl font-extrabold text-brand-800" id="stat-news-count">0</p>
-                            <p class="text-xs sm:text-sm font-medium text-gray-500">Kegiatan Terpublikasi</p>
-                        </div>
-                        <div>
-                            <p class="font-heading text-3xl font-extrabold text-brand-800" id="stat-photos-count">0</p>
-                            <p class="text-xs sm:text-sm font-medium text-gray-500">Dokumentasi Foto</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Visual Display Card -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <div class="absolute -inset-2 bg-gradient-to-r from-brand-700 to-gold-500 rounded-3xl blur-xl opacity-20 transform -rotate-2"></div>
-                        
-                        <div class="relative bg-white rounded-3xl p-4 shadow-xl border border-rose-100 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Pemuda 8Vibes" class="rounded-2xl object-cover w-full h-80 sm:h-96">
-                            
-                            <div class="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-lg flex items-center space-x-4">
-                                <div class="w-12 h-12 rounded-full bg-brand-700 text-white flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-md">
-                                    <i class="fa-solid fa-shield-halved text-gold-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-heading font-bold text-gray-900 text-sm">Semangat Gotong Royong</h4>
-                                    <p class="text-xs text-gray-500">Aktif, Kreatif, & Peduli Lingkungan</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- STRUKTUR ORGANISASI SECTION -->
-    <section id="struktur" class="py-20 bg-white border-y border-rose-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-700 font-bold text-sm tracking-wider uppercase bg-rose-50 px-3 py-1 rounded-full border border-rose-200">Kepengurusan 2025/2026</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3">Struktur Organisasi 8Vibes</h2>
-                <p class="text-gray-600 mt-2">Para pemuda yang mendedikasikan waktu dan energi untuk memajukan lingkungan Sememi RT 08.</p>
-            </div>
-
-            <!-- Dynamic Container for Organizational Structure -->
-            <div id="org-structure-container">
-                <!-- Injected via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- BERITA TERBARU & KEGIATAN -->
-    <section id="berita" class="py-20 bg-subtle-grid">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="text-brand-700 font-bold text-sm tracking-wider uppercase bg-rose-50 px-3 py-1 rounded-full border border-rose-200">Kabar 8Vibes</span>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Berita & Agenda Terbaru</h2>
-                </div>
-                
-                <!-- Filter Tabs -->
-                <div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="news-filter-buttons">
-                    <button onclick="filterNews('semua')" class="news-filter-btn active bg-brand-700 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">Semua</button>
-                    <button onclick="filterNews('Sosial')" class="news-filter-btn bg-white border border-gray-200 text-gray-700 hover:border-brand-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">Sosial</button>
-                    <button onclick="filterNews('Agenda')" class="news-filter-btn bg-white border border-gray-200 text-gray-700 hover:border-brand-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">Agenda</button>
-                    <button onclick="filterNews('Olahraga')" class="news-filter-btn bg-white border border-gray-200 text-gray-700 hover:border-brand-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">Olahraga</button>
-                </div>
-            </div>
-
-            <!-- Dynamic News Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="news-grid-container">
-                <!-- Injected via JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- GALERI DOKUMENTASI -->
-    <section id="galeri" class="py-20 bg-white border-t border-rose-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="text-brand-700 font-bold text-sm tracking-wider uppercase bg-rose-50 px-3 py-1 rounded-full border border-rose-200">Galeri Foto</span>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Dokumentasi Kegiatan</h2>
-                </div>
-                
-                <div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="gallery-filter-buttons">
-                    <button onclick="filterGallery('semua')" class="gallery-filter-btn active bg-brand-700 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">Semua Foto</button>
-                    <button onclick="filterGallery('Kerja Bakti')" class="gallery-filter-btn bg-white border border-gray-200 text-gray-700 hover:border-brand-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">Kerja Bakti</button>
-                    <button onclick="filterGallery('Olahraga')" class="gallery-filter-btn bg-white border border-gray-200 text-gray-700 hover:border-brand-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">Olahraga</button>
-                    <button onclick="filterGallery('Keagamaan')" class="gallery-filter-btn bg-white border border-gray-200 text-gray-700 hover:border-brand-600 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">Keagamaan</button>
-                </div>
-            </div>
-
-            <!-- Dynamic Gallery Grid -->
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid-container">
-                <!-- Injected via JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- DONASI PROGRAM & TRANSPARANSI -->
-    <section id="donasi" class="py-20 bg-rose-50/50 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl shadow-xl border border-rose-100 overflow-hidden p-6 sm:p-10 lg:p-12">
-                
-                <div class="grid lg:grid-cols-12 gap-10">
+    <main class="flex-grow">
+        <section id="hero" class="relative py-12 lg:py-16 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
-                    <!-- Left: Campaign Progress & Payment Options -->
-                    <div class="lg:col-span-7 space-y-6">
-                        <span class="bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded-full border border-brand-200">Program Donasi Transparan</span>
-                        
-                        <h2 class="font-heading text-3xl font-extrabold text-gray-900">
-                            Donasi Kas & Kegiatan Pemuda Sememi RT 08
-                        </h2>
-                        
-                        <p class="text-gray-600 leading-relaxed">
-                            Dukungan Anda membantu pemenuhan fasilitas alat olahraga, inventaris perlengkapan warga, serta aksi santunan sosial rutin di lingkungan kita.
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200/80 text-brand-700 text-xs font-bold uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-brand-600 animate-ping"></span>
+                            Pemuda Beraksi, Masyarakat Berdaya
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+                            Selamat Datang di <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-brand-700 to-red-500">
+                                Karang Taruna 8vibes
+                            </span>
+                        </h1>
+                        <p id="hero-slogan" class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                            Wadah kreasi, kolaborasi, dan kontribusi pemuda-pemudi 8vibes untuk membangun lingkungan yang harmonis, kreatif, dan penuh energi positif.
                         </p>
-
-                        <!-- Live Progress Bar -->
-                        <div class="bg-rose-50 p-6 rounded-2xl border border-rose-100 space-y-3">
-                            <div class="flex justify-between items-end">
-                                <div>
-                                    <p class="text-xs text-gray-500 font-semibold uppercase">Dana Terkumpul</p>
-                                    <p class="font-heading text-2xl sm:text-3xl font-extrabold text-brand-800" id="display-collected-amount">Rp 0</p>
-                                </div>
-                                <div class="text-right">
-                                    <p class="text-xs text-gray-500 font-semibold uppercase">Target Dana</p>
-                                    <p class="font-heading text-base font-bold text-gray-700" id="display-target-amount">Rp 10.000.000</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Progress Bar -->
-                            <div class="w-full h-4 bg-gray-200 rounded-full overflow-hidden p-0.5">
-                                <div id="donation-progress-bar" class="bg-gradient-to-r from-brand-700 via-rose-600 to-gold-500 h-full rounded-full w-[0%] transition-all duration-1000"></div>
-                            </div>
-                            
-                            <p class="text-xs text-gray-500 text-right font-medium" id="display-percentage">0% dari target tercapai</p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                            <a href="#donasi" class="px-7 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 rounded-2xl shadow-lg shadow-brand-600/30 hover:shadow-xl hover:scale-[1.02] transition-all text-center">
+                                <i class="fa-solid fa-heart mr-2"></i> Dukung / Donasi
+                            </a>
+                            <a href="#dokumentasi" class="px-7 py-3.5 text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-2xl shadow-sm hover:shadow transition-all text-center">
+                                <i class="fa-solid fa-images mr-2 text-brand-600"></i> Galeri Kegiatan
+                            </a>
                         </div>
 
-                        <!-- Bank Transfer List -->
-                        <div class="space-y-3 pt-2">
-                            <p class="text-sm font-bold text-gray-900">Transfer Rekening Resmi Admin:</p>
-                            
-                            <div class="flex items-center justify-between p-3.5 bg-gray-50 rounded-xl border border-gray-200">
-                                <div class="flex items-center space-x-3">
-                                    <span class="font-bold text-blue-800 text-xs bg-blue-100 px-2.5 py-1 rounded-md">BCA</span>
-                                    <div>
-                                        <p class="text-xs text-gray-500">a.n Karang Taruna 8Vibes</p>
-                                        <p class="font-mono font-bold text-gray-900 text-sm" id="display-bca-acc">8290 1823 99</p>
+                        <!-- Dynamic Public Floating Social Media Icons -->
+                        <div class="pt-6 border-t border-slate-200/70">
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Ikuti Media Sosial Kami:</p>
+                            <div id="hero-socials-container" class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+                                <!-- Dynamic JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -top-6 -left-6 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                                <img id="hero-banner-img" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="Hero Banner 8vibes" class="w-full h-[380px] sm:h-[440px] object-cover hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
+                                    <div class="text-white">
+                                        <p class="text-xs font-bold text-brand-300 uppercase tracking-widest">Komunitas Muda Aktif</p>
+                                        <h3 class="text-xl font-black">Energi & Inovasi 8vibes</h3>
                                     </div>
                                 </div>
-                                <button onclick="copyToClipboard(document.getElementById('display-bca-acc').innerText, 'BCA')" class="text-xs bg-white border border-gray-300 hover:bg-rose-50 text-brand-700 font-semibold px-3 py-1.5 rounded-lg transition">
-                                    <i class="fa-regular fa-copy mr-1"></i>Salin
-                                </button>
-                            </div>
-
-                            <div class="flex items-center justify-between p-3.5 bg-gray-50 rounded-xl border border-gray-200">
-                                <div class="flex items-center space-x-3">
-                                    <span class="font-bold text-blue-900 text-xs bg-yellow-100 px-2.5 py-1 rounded-md">MANDIRI</span>
-                                    <div>
-                                        <p class="text-xs text-gray-500">a.n Karang Taruna 8Vibes</p>
-                                        <p class="font-mono font-bold text-gray-900 text-sm" id="display-mandiri-acc">1420 0192 8812 3</p>
-                                    </div>
-                                </div>
-                                <button onclick="copyToClipboard(document.getElementById('display-mandiri-acc').innerText, 'Mandiri')" class="text-xs bg-white border border-gray-300 hover:bg-rose-50 text-brand-700 font-semibold px-3 py-1.5 rounded-lg transition">
-                                    <i class="fa-regular fa-copy mr-1"></i>Salin
-                                </button>
                             </div>
                         </div>
-
-                        <!-- Recent Donors List -->
-                        <div class="pt-4 border-t border-gray-100">
-                            <h4 class="font-heading font-bold text-sm text-gray-900 mb-3">Donatur Terbaru:</h4>
-                            <div class="space-y-2 max-h-36 overflow-y-auto custom-scrollbar pr-2" id="recent-donors-list">
-                                <!-- Injected via JS -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right: QRIS & Interactive Form -->
-                    <div class="lg:col-span-5 bg-gradient-to-br from-gray-900 via-brand-900 to-black text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl">
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <h3 class="font-heading font-bold text-lg text-white">Scan QRIS Donasi</h3>
-                                <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full text-rose-200">Semua E-Wallet & Bank</span>
-                            </div>
-
-                            <!-- QRIS Image Display -->
-                            <div class="bg-white p-4 rounded-2xl text-center mb-6 shadow-inner">
-                                <img id="display-qris-image" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Donasi8VibesSememiRT08" alt="QRIS Karang Taruna 8Vibes" class="mx-auto w-44 h-44 rounded-lg">
-                                <p class="text-gray-700 text-xs mt-2 font-bold uppercase tracking-wider">NMID: ID102938472910</p>
-                            </div>
-
-                            <!-- Preset Nominal & Custom Form -->
-                            <h4 class="font-bold text-sm text-rose-200 mb-2">Pilih/Isi Nominal Donasi</h4>
-                            
-                            <div class="grid grid-cols-3 gap-2 mb-3">
-                                <button onclick="setDonationPreset(20000)" class="bg-white/10 hover:bg-white/20 border border-white/20 text-xs py-2 rounded-lg font-semibold transition">20 Rb</button>
-                                <button onclick="setDonationPreset(50000)" class="bg-white/10 hover:bg-white/20 border border-white/20 text-xs py-2 rounded-lg font-semibold transition">50 Rb</button>
-                                <button onclick="setDonationPreset(100000)" class="bg-white/10 hover:bg-white/20 border border-white/20 text-xs py-2 rounded-lg font-semibold transition">100 Rb</button>
-                            </div>
-
-                            <div class="space-y-3">
-                                <input type="text" id="donor-name-input" placeholder="Nama Lengkap / Hamba Allah" class="w-full text-sm px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-rose-400">
-                                <input type="number" id="donor-amount-input" placeholder="Nominal Rp (Contoh: 50000)" class="w-full text-sm px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-rose-400">
-                                
-                                <button onclick="submitDonationViaWA()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center space-x-2 shadow-lg">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                                    <span>Konfirmasi Donasi via WA</span>
-                                </button>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- KONTAK & LOKASI SEKRETARIAT -->
-    <section id="kontak" class="py-20 bg-white border-t border-rose-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-700 font-bold text-sm tracking-wider uppercase bg-rose-50 px-3 py-1 rounded-full border border-rose-200">Aspirasi & Kontak</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Hubungi Sekretariat RT 08</h2>
-                <p class="text-gray-600 mt-2">Sampaikan masukan, ide kegiatan, atau pertanyaan langsung kepada pengurus Karang Taruna.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Contact Form -->
-                <div class="lg:col-span-6 bg-gray-50 border border-gray-200 rounded-3xl p-6 sm:p-8">
-                    <h3 class="font-heading font-bold text-xl text-gray-900 mb-4">Kirim Pesan atau Aspirasi</h3>
-                    <form onsubmit="handleContactForm(event)" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Lengkap</label>
-                            <input type="text" id="contact-name" required placeholder="Masukkan nama Anda" class="w-full text-sm px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-700 focus:outline-none bg-white">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nomor WhatsApp</label>
-                            <input type="tel" id="contact-phone" required placeholder="0812xxxxxxxx" class="w-full text-sm px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-700 focus:outline-none bg-white">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Pesan / Saran</label>
-                            <textarea id="contact-message" rows="4" required placeholder="Tuliskan ide atau pertanyaan Anda..." class="w-full text-sm px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-700 focus:outline-none bg-white"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-brand-700 hover:bg-brand-800 text-white font-bold py-3.5 rounded-xl shadow-lg transition">
-                            Kirim Pesan via WA
-                        </button>
-                    </form>
+        <section id="struktur" class="py-16 bg-white/80 border-y border-slate-200/70">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">Kepengurusan</h2>
+                    <h3 class="text-3xl font-black text-slate-900 sm:text-4xl">Struktur Organisasi 8vibes</h3>
+                    <p class="mt-3 text-slate-600 text-sm">Pengurus pilihan mendedikasikan ide dan aksi demi memajukan potensi pemuda.</p>
                 </div>
 
-                <!-- Map Embed & Address -->
-                <div class="lg:col-span-6 space-y-6">
-                    <div class="bg-gray-900 text-white p-6 rounded-3xl space-y-4">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white shrink-0 mt-1">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-heading font-bold text-lg">Alamat Sekretariat</h4>
-                                <p class="text-sm text-gray-300 leading-relaxed mt-1" id="display-address-text">
-                                    Balai RW / Pos RT 08 Sememi, Kecamatan Benowo, Kota Surabaya, Jawa Timur 60198.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4 pt-2 border-t border-gray-800">
-                            <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white shrink-0 mt-1">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-heading font-bold text-lg">WhatsApp Hotline</h4>
-                                <p class="text-sm text-gray-300 mt-1" id="display-wa-hotline">+62 812-3456-7890</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Google Map Embed -->
-                    <div class="rounded-3xl overflow-hidden border border-gray-200 shadow-md h-64">
-                        <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15830.822839462828!2d112.6481!3d-7.2741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fdbcd3032b85%3A0x5027a76e356e3c0!2sSememi%2C%20Benowo%2C%20Surabaya!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                <div id="struktur-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Dynamic rendering via JS -->
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
-            <div class="flex flex-col sm:flex-row items-center justify-between pb-8 border-b border-gray-800">
-                <div class="flex items-center space-x-3 mb-4 sm:mb-0">
-                    <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center font-bold text-xl text-gold-400">8</div>
+        <section id="berita" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                     <div>
-                        <span class="font-heading font-extrabold text-xl text-white">8Vibes Sememi</span>
-                        <p class="text-xs text-gray-400">Karang Taruna RT 08 Sememi Benowo Surabaya</p>
+                        <h2 class="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">Informasi & Aksi</h2>
+                        <h3 class="text-3xl font-black text-slate-900 sm:text-4xl">Berita & Pengumuman</h3>
+                    </div>
+                    <!-- Search Bar -->
+                    <div class="w-full md:w-72 relative">
+                        <input type="text" id="news-search-input" onkeyup="searchNews()" placeholder="Cari berita atau kegiatan..." class="w-full pl-10 pr-4 py-2.5 text-xs rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-brand-600 focus:border-brand-600 outline-none transition-all">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-xs"></i>
                     </div>
                 </div>
-                
-                <div class="flex space-x-3">
-                    <button onclick="toggleAdminModal()" class="text-xs text-gray-400 hover:text-white bg-gray-800 px-3 py-1.5 rounded-lg border border-gray-700">
-                        <i class="fa-solid fa-lock mr-1"></i> Panel Admin
-                    </button>
+
+                <div id="berita-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Dynamic rendering via JS -->
                 </div>
             </div>
+        </section>
 
-            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
-                <p>&copy; 2026 Karang Taruna 8Vibes Sememi RT 08. Hak Cipta Dilindungi.</p>
-                <p class="mt-2 sm:mt-0">Diperbarui via Integrated Admin Panel</p>
+        <section id="dokumentasi" class="py-16 bg-white/80 border-y border-slate-200/70">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-8">
+                    <h2 class="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">Momen Terabadikan</h2>
+                    <h3 class="text-3xl font-black text-slate-900 sm:text-4xl">Galeri Dokumentasi</h3>
+                </div>
+
+                <!-- Gallery Category Filters -->
+                <div class="flex flex-wrap justify-center gap-2 mb-10" id="gallery-filters">
+                    <button onclick="filterGallery('Semua')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-brand-600 text-white shadow-sm" data-category="Semua">Semua</button>
+                    <button onclick="filterGallery('Gotong Royong')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200" data-category="Gotong Royong">Gotong Royong</button>
+                    <button onclick="filterGallery('Olahraga')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200" data-category="Olahraga">Olahraga</button>
+                    <button onclick="filterGallery('Keagamaan')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200" data-category="Keagamaan">Keagamaan</button>
+                    <button onclick="filterGallery('Seni/Budaya')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200" data-category="Seni/Budaya">Seni & Budaya</button>
+                </div>
+
+                <div id="galeri-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Dynamic rendering via JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="donasi" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">Transparansi & Partisipasi</h2>
+                    <h3 class="text-3xl font-black text-slate-900 sm:text-4xl">Donasi Program Kegiatan</h3>
+                    <p class="mt-3 text-slate-600 text-sm">Dukungan finansial Anda disalurkan secara terbuka untuk menyukseskan program-program pemuda & warga.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-lg">
+                        <div class="flex items-center justify-between gap-4 mb-4">
+                            <span class="px-3 py-1 bg-brand-50 text-brand-700 text-xs font-bold rounded-full border border-brand-200" id="donasi-nama-program">Program Utama 8vibes</span>
+                            <span class="text-xs text-slate-500 font-medium"><i class="fa-regular fa-clock mr-1"></i> Status Aktif</span>
+                        </div>
+                        
+                        <h4 id="donasi-judul" class="text-2xl font-bold text-slate-900 mb-3">Penggalangan Dana Kegiatan HUT & Bakti Sosial</h4>
+                        <p id="donasi-deskripsi" class="text-sm text-slate-600 mb-6 leading-relaxed">Dana yang terkumpul digunakan untuk operasional pentas seni pemuda, santunan lansia, perbaikan fasilitas olahraga umum, serta perlengkapan bakti sosial.</p>
+
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between text-xs sm:text-sm">
+                                <span class="text-slate-500 font-medium">Terkumpul: <strong class="text-slate-900 font-bold" id="donasi-terkumpul-text">Rp 0</strong></span>
+                                <span class="text-slate-500 font-medium">Target: <strong class="text-brand-600 font-bold" id="donasi-target-text">Rp 0</strong></span>
+                            </div>
+                            <div class="w-full h-4 bg-slate-100 rounded-full overflow-hidden p-0.5 border border-slate-200">
+                                <div id="donasi-progress-bar" class="h-full bg-gradient-to-r from-brand-500 to-brand-700 rounded-full transition-all duration-1000" style="width: 0%"></div>
+                            </div>
+                            <div class="flex justify-end">
+                                <span id="donasi-persen-text" class="text-xs font-black text-brand-600">0% Ketercapaian</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-6">
+                            <h5 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Metode Transfer & QRIS</h5>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="w-8 h-8 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-building-columns"></i></div>
+                                        <span class="font-bold text-sm text-slate-800">Transfer Rekening</span>
+                                    </div>
+                                    <p class="text-xs text-slate-500">Bank Resmi Organisasi</p>
+                                    <p class="text-xs font-extrabold text-slate-900 mt-1 select-all cursor-pointer" id="donasi-rekening" title="Klik untuk menyalin">123-000-8VIBES-88</p>
+                                    <p class="text-[11px] text-slate-400 mt-0.5">a.n Karang Taruna 8vibes</p>
+                                </div>
+                                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col items-center justify-center text-center">
+                                    <p class="text-xs font-bold text-slate-700 mb-1.5">Scan All Payment QRIS</p>
+                                    <img id="donasi-qris-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=KARANGTARUNA8VIBES" alt="QRIS Donasi" class="w-24 h-24 rounded-xl shadow-sm border border-white">
+                                    <p class="text-[10px] text-slate-400 mt-1.5">Gopay / OVO / Dana / ShopeePay / Banking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Form Donatur -->
+                    <div class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-lg">
+                        <h4 class="text-xl font-bold text-slate-900 mb-1">Form Konfirmasi Donasi</h4>
+                        <p class="text-xs text-slate-500 mb-6">Catatkan nama Anda di daftar donatur transparansi publik.</p>
+
+                        <form id="form-donasi" onsubmit="handleUserDonation(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Nama Lengkap / Hamba Allah</label>
+                                <input type="text" id="donatur-nama" required placeholder="Contoh: Ahmad Rizky" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Nominal Donasi (Rp)</label>
+                                <input type="number" id="donatur-nominal" required min="10000" placeholder="Contoh: 100000" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Pesan / Doa Harapan (Opsional)</label>
+                                <textarea id="donatur-pesan" rows="2" placeholder="Semoga pemuda 8vibes semakin maju!" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 outline-none transition-all"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 text-xs font-bold text-white bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 rounded-xl shadow-md shadow-brand-600/30 transition-all">
+                                <i class="fa-solid fa-paper-plane mr-2"></i> Kirim Konfirmasi Donasi
+                            </button>
+                        </form>
+
+                        <div class="mt-8 border-t border-slate-100 pt-6">
+                            <h5 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Donatur Terbaru</h5>
+                            <div id="donatur-list" class="space-y-3 max-h-48 overflow-y-auto pr-1">
+                                <!-- Dynamic Donor Rows -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-600 p-0.5">
+                            <img id="footer-logo" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=120&q=80" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <span class="text-2xl font-black text-white tracking-wider">8VIBES</span>
+                    </div>
+                    <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+                        Karang Taruna 8vibes berdedikasi membangun potensi generasi muda, solidaritas sosial, serta kreativitas lingkungan yang berdampak positif.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#hero" class="hover:text-brand-500 transition-colors">Beranda</a></li>
+                        <li><a href="#struktur" class="hover:text-brand-500 transition-colors">Struktur Organisasi</a></li>
+                        <li><a href="#berita" class="hover:text-brand-500 transition-colors">Berita & Kegiatan</a></li>
+                        <li><a href="#dokumentasi" class="hover:text-brand-500 transition-colors">Galeri Foto</a></li>
+                        <li><a href="#donasi" class="hover:text-brand-500 transition-colors">Donasi Program</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Sosial Media Resmi</h4>
+                    <div id="footer-socials-container" class="flex flex-wrap gap-2">
+                        <!-- Dynamic Footer Social Icons -->
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Karang Taruna 8vibes. All rights reserved.</p>
+                <button onclick="promptAdminLogin()" class="hover:text-brand-500 transition-colors text-xs flex items-center gap-1.5 font-bold text-slate-400">
+                    <i class="fa-solid fa-lock text-[10px] text-brand-500"></i> Open Admin Panel
+                </button>
             </div>
         </div>
     </footer>
 
-    <!-- MODAL NEWS READER -->
-    <div id="news-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar p-6 sm:p-8 relative shadow-2xl">
-            <button onclick="closeNewsModal()" class="absolute top-4 right-4 w-9 h-9 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 transition">
-                <i class="fa-solid fa-xmark"></i>
+    <!-- ALWAYS VISIBLE FLOATING ADMIN QUICK ACTION BUTTON (BOTTOM RIGHT) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="promptAdminLogin()" title="Buka Admin Panel (Passcode: admin8vibes)" class="w-13 h-13 p-3.5 bg-gradient-to-tr from-brand-700 to-brand-500 text-white rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center border-2 border-white/50 group">
+            <i class="fa-solid fa-user-gear text-xl group-hover:rotate-45 transition-transform duration-300"></i>
+        </button>
+    </div>
+
+    <div id="modal-berita" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+            <button onclick="closeModalBerita()" class="absolute top-4 right-4 w-10 h-10 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center text-slate-600 transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
             </button>
-            <span id="modal-news-category" class="bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded-full">Kategori</span>
-            <h3 id="modal-news-title" class="font-heading text-2xl font-bold text-gray-900 mt-3 mb-2">Judul Artikel</h3>
-            <p id="modal-news-date" class="text-xs text-gray-400 mb-4"><i class="fa-regular fa-calendar mr-1"></i> Tanggal</p>
-            <img id="modal-news-image" src="" class="w-full h-64 object-cover rounded-2xl mb-4 shadow">
-            <div id="modal-news-content" class="text-gray-600 text-sm space-y-3 leading-relaxed whitespace-pre-line">
-                <!-- Content injected via JS -->
-            </div>
+            <div id="modal-berita-content"></div>
         </div>
     </div>
 
-    <!-- MODAL LIGHTBOX GALLERY -->
-    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox()">
-        <div class="relative max-w-4xl w-full text-center" onclick="event.stopPropagation()">
-            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-2xl hover:text-gray-300">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <img id="lightbox-img" src="" class="max-h-[80vh] mx-auto rounded-xl shadow-2xl object-contain">
-            <p id="lightbox-caption" class="text-white font-semibold text-base mt-4"></p>
+    <div id="modal-lightbox" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-brand-500 text-3xl transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl max-h-[85vh] text-center">
+            <img id="lightbox-img" src="" alt="Preview" class="max-h-[75vh] w-auto mx-auto rounded-2xl shadow-2xl object-contain">
+            <p id="lightbox-title" class="text-white text-lg font-bold mt-4"></p>
+            <span id="lightbox-category" class="inline-block mt-1 px-3 py-1 bg-brand-600 text-white text-xs font-bold rounded-full"></span>
         </div>
     </div>
 
-    <!-- MODAL INTEGRATED ADMIN DASHBOARD -->
-    <div id="admin-modal" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-md flex items-center justify-center p-2 sm:p-4">
-        <div class="bg-white rounded-3xl w-full max-w-5xl h-[92vh] flex flex-col overflow-hidden shadow-2xl border border-gray-200">
+    <!-- ADMIN PANEL MODAL CONTAINER -->
+    <div id="modal-admin" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-2 sm:p-4">
+        <div class="bg-white rounded-3xl max-w-6xl w-full h-[90vh] flex flex-col shadow-2xl overflow-hidden border border-slate-200">
             
             <!-- Admin Header -->
-            <div class="bg-gradient-to-r from-brand-900 via-brand-700 to-black text-white px-6 py-4 flex items-center justify-between border-b border-rose-900 shrink-0">
-                <div class="flex items-center space-x-3">
-                    <div class="w-9 h-9 rounded-xl bg-gold-500 text-brand-900 flex items-center justify-center font-bold">
-                        <i class="fa-solid fa-gauge-high"></i>
+            <div class="bg-slate-900 text-white px-6 py-4 flex justify-between items-center border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center font-bold text-sm shadow-md">
+                        <i class="fa-solid fa-sliders"></i>
                     </div>
                     <div>
-                        <h3 class="font-heading font-extrabold text-lg text-white">Dashboard Admin 8Vibes</h3>
-                        <p class="text-xs text-rose-200">Kelola Konten & Website Karang Taruna Real-time</p>
+                        <h3 class="font-bold text-base leading-tight">Dashboard Admin Panel 8vibes</h3>
+                        <p class="text-[11px] text-slate-400">Kontrol penuh struktur, berita, galeri, donasi & sosial media</p>
                     </div>
                 </div>
-
-                <div class="flex items-center space-x-2">
-                    <span id="admin-login-badge" class="hidden sm:inline-block bg-emerald-500/20 text-emerald-300 text-xs px-3 py-1 rounded-full border border-emerald-500/30 font-medium">
-                        <i class="fa-solid fa-circle text-[8px] text-emerald-400 mr-1"></i> Terautentikasi
-                    </span>
-                    <button onclick="toggleAdminModal()" class="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
+                <button onclick="closeAdminModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center text-slate-300 transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
 
-            <!-- Login View (When not authenticated) -->
-            <div id="admin-login-view" class="p-8 sm:p-12 flex-1 flex flex-col justify-center items-center text-center">
-                <div class="w-16 h-16 rounded-2xl bg-rose-100 text-brand-700 flex items-center justify-center text-2xl mb-4 shadow">
-                    <i class="fa-solid fa-lock"></i>
-                </div>
-                <h4 class="font-heading font-bold text-2xl text-gray-900">Masuk Panel Administrator</h4>
-                <p class="text-gray-500 text-sm max-w-sm mt-1 mb-6">Masukkan password pengurus untuk mengedit struktur, berita, galeri, dan donasi.</p>
+            <div class="flex-grow flex flex-col md:flex-row overflow-hidden">
                 
-                <div class="w-full max-w-sm space-y-3">
-                    <input type="password" id="admin-pass-input" placeholder="Password Admin (Hanya Admin)" class="w-full text-center px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-700 focus:outline-none text-sm">
-                    <button onclick="authenticateAdmin()" class="w-full bg-brand-700 hover:bg-brand-800 text-white font-bold py-3 rounded-xl shadow-lg transition">
-                        Masuk Dashboard
+                <!-- Admin Sidebar Tabs -->
+                <div class="w-full md:w-64 bg-slate-50 border-r border-slate-200 p-4 flex md:flex-col gap-1.5 overflow-x-auto md:overflow-y-auto">
+                    <button onclick="switchAdminTab('stats')" class="admin-tab-btn active w-full px-3.5 py-2.5 rounded-xl text-xs font-bold text-left flex items-center gap-3 transition-all bg-brand-600 text-white shadow-sm" data-tab="stats">
+                        <i class="fa-solid fa-chart-pie w-4"></i> Overview Stats
                     </button>
-                    <p class="text-xs text-gray-400">Password standar: <code class="bg-gray-100 px-1.5 py-0.5 rounded font-mono">Hanya Admin</code></p>
-                </div>
-            </div>
-
-            <!-- Dashboard Main View (When authenticated) -->
-            <div id="admin-dashboard-view" class="hidden flex-1 flex flex-col md:flex-row overflow-hidden">
-                
-                <!-- Sidebar Nav Tabs -->
-                <aside class="w-full md:w-64 bg-gray-900 text-gray-300 p-4 border-r border-gray-800 flex md:flex-col overflow-x-auto md:overflow-y-auto shrink-0 gap-1 custom-scrollbar">
-                    <button onclick="switchAdminTab('overview')" id="tab-btn-overview" class="admin-tab-btn active w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-left shrink-0">
-                        <i class="fa-solid fa-chart-pie w-5 text-center"></i>
-                        <span>Ringkasan Data</span>
+                    <button onclick="switchAdminTab('struktur')" class="admin-tab-btn w-full px-3.5 py-2.5 rounded-xl text-xs font-bold text-left flex items-center gap-3 transition-all text-slate-600 hover:bg-slate-200/80" data-tab="struktur">
+                        <i class="fa-solid fa-users w-4"></i> Kelola Pengurus
                     </button>
-                    <button onclick="switchAdminTab('struktur')" id="tab-btn-struktur" class="admin-tab-btn w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-left shrink-0">
-                        <i class="fa-solid fa-sitemap w-5 text-center"></i>
-                        <span>Pengurus</span>
+                    <button onclick="switchAdminTab('berita')" class="admin-tab-btn w-full px-3.5 py-2.5 rounded-xl text-xs font-bold text-left flex items-center gap-3 transition-all text-slate-600 hover:bg-slate-200/80" data-tab="berita">
+                        <i class="fa-solid fa-newspaper w-4"></i> Kelola Berita
                     </button>
-                    <button onclick="switchAdminTab('berita')" id="tab-btn-berita" class="admin-tab-btn w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-left shrink-0">
-                        <i class="fa-solid fa-newspaper w-5 text-center"></i>
-                        <span>Berita & Agenda</span>
+                    <button onclick="switchAdminTab('dokumentasi')" class="admin-tab-btn w-full px-3.5 py-2.5 rounded-xl text-xs font-bold text-left flex items-center gap-3 transition-all text-slate-600 hover:bg-slate-200/80" data-tab="dokumentasi">
+                        <i class="fa-solid fa-images w-4"></i> Kelola Galeri
                     </button>
-                    <button onclick="switchAdminTab('galeri')" id="tab-btn-galeri" class="admin-tab-btn w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-left shrink-0">
-                        <i class="fa-solid fa-images w-5 text-center"></i>
-                        <span>Galeri Foto</span>
+                    <button onclick="switchAdminTab('donasi')" class="admin-tab-btn w-full px-3.5 py-2.5 rounded-xl text-xs font-bold text-left flex items-center gap-3 transition-all text-slate-600 hover:bg-slate-200/80" data-tab="donasi">
+                        <i class="fa-solid fa-hand-holding-dollar w-4"></i> Kelola Donasi
                     </button>
-                    <button onclick="switchAdminTab('donasi')" id="tab-btn-donasi" class="admin-tab-btn w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-left shrink-0">
-                        <i class="fa-solid fa-coins w-5 text-center"></i>
-                        <span>Kas & Donasi</span>
+                    <button onclick="switchAdminTab('sosmed')" class="admin-tab-btn w-full px-3.5 py-2.5 rounded-xl text-xs font-bold text-left flex items-center gap-3 transition-all text-slate-600 hover:bg-slate-200/80" data-tab="sosmed">
+                        <i class="fa-solid fa-share-nodes w-4 text-brand-600"></i> Kelola Sosmed
                     </button>
-                    <button onclick="switchAdminTab('pengaturan')" id="tab-btn-pengaturan" class="admin-tab-btn w-full flex items-center space-x-3 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-left shrink-0">
-                        <i class="fa-solid fa-sliders w-5 text-center"></i>
-                        <span>Teks Website</span>
+                    <button onclick="switchAdminTab('media')" class="admin-tab-btn w-full px-3.5 py-2.5 rounded-xl text-xs font-bold text-left flex items-center gap-3 transition-all text-slate-600 hover:bg-slate-200/80" data-tab="media">
+                        <i class="fa-solid fa-image w-4"></i> Media & Banner Web
                     </button>
                     
-                    <div class="mt-auto pt-4 hidden md:block">
-                        <button onclick="logoutAdmin()" class="w-full bg-rose-950/80 hover:bg-rose-900 text-rose-200 px-3 py-2 rounded-xl text-xs font-bold transition flex items-center justify-center space-x-2">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                            <span>Keluar Admin</span>
+                    <div class="hidden md:block mt-auto pt-4 border-t border-slate-200">
+                        <button onclick="resetDataToDefault()" class="w-full px-3 py-2 text-xs font-bold text-red-600 bg-red-50 hover:bg-red-100 rounded-xl transition-colors border border-red-200 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-rotate-left"></i> Reset Demo Data
                         </button>
                     </div>
-                </aside>
+                </div>
 
-                <!-- Tab Content Area -->
-                <main class="flex-1 bg-gray-50 p-4 sm:p-6 overflow-y-auto custom-scrollbar">
-                    
-                    <!-- TAB 1: OVERVIEW STATS -->
-                    <div id="admin-tab-overview" class="admin-tab-content space-y-6">
-                        <h4 class="font-heading font-bold text-xl text-gray-900">Ringkasan Website & Statistik</h4>
-                        
-                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
-                                <p class="text-xs font-bold text-gray-400 uppercase">Pengurus</p>
-                                <p class="font-heading text-3xl font-extrabold text-brand-800 mt-1" id="dash-stat-members">0</p>
-                                <p class="text-xs text-gray-500 mt-1">Orang terdaftar</p>
-                            </div>
-                            <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
-                                <p class="text-xs font-bold text-gray-400 uppercase">Berita/Agenda</p>
-                                <p class="font-heading text-3xl font-extrabold text-brand-800 mt-1" id="dash-stat-news">0</p>
-                                <p class="text-xs text-gray-500 mt-1">Artikel aktif</p>
-                            </div>
-                            <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
-                                <p class="text-xs font-bold text-gray-400 uppercase">Galeri Foto</p>
-                                <p class="font-heading text-3xl font-extrabold text-brand-800 mt-1" id="dash-stat-photos">0</p>
-                                <p class="text-xs text-gray-500 mt-1">Foto kegiatan</p>
-                            </div>
-                            <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
-                                <p class="text-xs font-bold text-gray-400 uppercase">Donasi Terkumpul</p>
-                                <p class="font-heading text-2xl font-extrabold text-emerald-700 mt-1" id="dash-stat-donations">Rp 0</p>
-                                <p class="text-xs text-gray-500 mt-1">Kas masuk</p>
-                            </div>
+                <!-- Admin Tab Contents Container -->
+                <div class="flex-grow p-6 overflow-y-auto bg-white">
+
+                    <!-- Tab: Overview Stats -->
+                    <div id="admin-tab-stats" class="admin-content space-y-6">
+                        <div class="border-b pb-4">
+                            <h4 class="font-bold text-slate-900 text-lg">Ringkasan Web Karang Taruna</h4>
+                            <p class="text-xs text-slate-500">Statistik data yang aktif di halaman publik</p>
                         </div>
-
-                        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-info text-amber-600 text-lg mt-0.5"></i>
-                            <div class="text-xs text-amber-800 leading-relaxed">
-                                <p class="font-bold">Info Data Persistence:</p>
-                                Setiap perubahan yang Anda buat di panel admin ini akan langsung disimpan ke memori browser (<code class="bg-amber-100 px-1 rounded">localStorage</code>) dan secara otomatis memperbarui tampilan di halaman utama secara publik.
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                            <div class="p-4 bg-red-50 rounded-2xl border border-red-100">
+                                <p class="text-xs font-bold text-red-600 uppercase">Pengurus</p>
+                                <h3 id="stat-total-pengurus" class="text-2xl font-black text-slate-900 mt-1">0</h3>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                                <p class="text-xs font-bold text-slate-600 uppercase">Berita Published</p>
+                                <h3 id="stat-total-berita" class="text-2xl font-black text-slate-900 mt-1">0</h3>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                                <p class="text-xs font-bold text-slate-600 uppercase">Dokumentasi</p>
+                                <h3 id="stat-total-galeri" class="text-2xl font-black text-slate-900 mt-1">0</h3>
+                            </div>
+                            <div class="p-4 bg-red-50 rounded-2xl border border-red-100">
+                                <p class="text-xs font-bold text-red-600 uppercase">Total Donasi</p>
+                                <h3 id="stat-total-donasi" class="text-lg font-black text-slate-900 mt-1">Rp 0</h3>
                             </div>
                         </div>
                     </div>
 
-                    <!-- TAB 2: MANAGE STRUCTURE -->
-                    <div id="admin-tab-struktur" class="admin-tab-content hidden space-y-6">
-                        <div class="flex items-center justify-between">
-                            <h4 class="font-heading font-bold text-xl text-gray-900">Kelola Struktur Pengurus</h4>
-                            <button onclick="openOrgFormModal()" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition">
-                                <i class="fa-solid fa-plus mr-1"></i> Tambah Pengurus
+                    <!-- Tab: Struktur -->
+                    <div id="admin-tab-struktur" class="admin-content space-y-6 hidden">
+                        <div class="flex justify-between items-center border-b pb-4">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Kelola Struktur Pengurus</h4>
+                                <p class="text-xs text-slate-500">Tambah / Hapus pengurus 8vibes & akun Instagram</p>
+                            </div>
+                            <button onclick="openFormStruktur()" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold flex items-center gap-2 shadow-sm">
+                                <i class="fa-solid fa-plus"></i> Tambah Pengurus
                             </button>
                         </div>
 
-                        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-left text-xs">
-                                    <thead class="bg-gray-100 text-gray-700 font-bold uppercase border-b border-gray-200">
-                                        <tr>
-                                            <th class="p-3">Foto</th>
-                                            <th class="p-3">Nama Lengkap</th>
-                                            <th class="p-3">Jabatan</th>
-                                            <th class="p-3">Kategori</th>
-                                            <th class="p-3 text-right">Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="admin-org-table-body" class="divide-y divide-gray-100">
-                                        <!-- Injected via JS -->
-                                    </tbody>
-                                </table>
+                        <form id="form-struktur" onsubmit="saveStruktur(event)" class="hidden bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Nama Lengkap</label>
+                                    <input type="text" id="input-struktur-nama" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Jabatan</label>
+                                    <input type="text" id="input-struktur-jabatan" placeholder="Ketua / Wakil / Anggota" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
                             </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">URL Foto Profil</label>
+                                    <input type="url" id="input-struktur-foto" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Instagram (Username atau Link)</label>
+                                    <input type="text" id="input-struktur-instagram" placeholder="@username" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+                            </div>
+                            <div class="flex justify-end gap-2 pt-2">
+                                <button type="button" onclick="closeFormStruktur()" class="px-3 py-1.5 bg-slate-200 text-slate-700 rounded-lg text-xs font-bold">Batal</button>
+                                <button type="submit" class="px-4 py-1.5 bg-brand-600 text-white rounded-lg text-xs font-bold">Simpan Pengurus</button>
+                            </div>
+                        </form>
+
+                        <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+                            <table class="w-full text-left text-xs text-slate-600">
+                                <thead class="bg-slate-50 text-slate-800 font-bold border-b border-slate-200">
+                                    <tr>
+                                        <th class="p-3">Foto</th>
+                                        <th class="p-3">Nama</th>
+                                        <th class="p-3">Jabatan</th>
+                                        <th class="p-3">Instagram</th>
+                                        <th class="p-3 text-right">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-table-struktur" class="divide-y divide-slate-100"></tbody>
+                            </table>
                         </div>
                     </div>
 
-                    <!-- TAB 3: MANAGE NEWS -->
-                    <div id="admin-tab-berita" class="admin-tab-content hidden space-y-6">
-                        <div class="flex items-center justify-between">
-                            <h4 class="font-heading font-bold text-xl text-gray-900">Kelola Berita & Agenda</h4>
-                            <button onclick="openNewsFormModal()" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition">
-                                <i class="fa-solid fa-plus mr-1"></i> Tambah Berita Baru
-                            </button>
-                        </div>
-
-                        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-left text-xs">
-                                    <thead class="bg-gray-100 text-gray-700 font-bold uppercase border-b border-gray-200">
-                                        <tr>
-                                            <th class="p-3">Gambar</th>
-                                            <th class="p-3">Judul Berita</th>
-                                            <th class="p-3">Kategori</th>
-                                            <th class="p-3">Tanggal</th>
-                                            <th class="p-3 text-right">Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="admin-news-table-body" class="divide-y divide-gray-100">
-                                        <!-- Injected via JS -->
-                                    </tbody>
-                                </table>
+                    <!-- Tab: Berita -->
+                    <div id="admin-tab-berita" class="admin-content space-y-6 hidden">
+                        <div class="flex justify-between items-center border-b pb-4">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Kelola Berita & Pengumuman</h4>
+                                <p class="text-xs text-slate-500">Publikasikan informasi berita terbaru</p>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- TAB 4: MANAGE GALLERY -->
-                    <div id="admin-tab-galeri" class="admin-tab-content hidden space-y-6">
-                        <div class="flex items-center justify-between">
-                            <h4 class="font-heading font-bold text-xl text-gray-900">Kelola Galeri Foto</h4>
-                            <button onclick="openGalleryFormModal()" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition">
-                                <i class="fa-solid fa-plus mr-1"></i> Tambah Foto Baru
+                            <button onclick="openFormBerita()" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold flex items-center gap-2 shadow-sm">
+                                <i class="fa-solid fa-plus"></i> Tambah Berita
                             </button>
                         </div>
 
-                        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4" id="admin-gallery-grid-body">
-                            <!-- Injected via JS -->
-                        </div>
-                    </div>
-
-                    <!-- TAB 5: MANAGE DONATIONS -->
-                    <div id="admin-tab-donasi" class="admin-tab-content hidden space-y-6">
-                        <h4 class="font-heading font-bold text-xl text-gray-900">Atur Target & Kas Donasi</h4>
-
-                        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
-                            <h5 class="font-bold text-sm text-gray-800 border-b pb-2">Target & Rekening Bank</h5>
-                            <div class="grid sm:grid-cols-2 gap-4">
+                        <form id="form-berita" onsubmit="saveBerita(event)" class="hidden bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div>
-                                    <label class="block text-xs font-bold text-gray-700 mb-1">Target Dana (Rp)</label>
-                                    <input type="number" id="admin-target-amount-input" class="w-full text-xs p-2.5 border rounded-xl">
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Judul Berita</label>
+                                    <input type="text" id="input-berita-judul" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-gray-700 mb-1">Total Dana Terkumpul Manual (Rp)</label>
-                                    <input type="number" id="admin-collected-amount-input" class="w-full text-xs p-2.5 border rounded-xl">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-700 mb-1">No Rekening BCA</label>
-                                    <input type="text" id="admin-bca-input" class="w-full text-xs p-2.5 border rounded-xl">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-700 mb-1">No Rekening Mandiri</label>
-                                    <input type="text" id="admin-mandiri-input" class="w-full text-xs p-2.5 border rounded-xl">
-                                </div>
-                            </div>
-                            <button onclick="saveDonationSettings()" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">
-                                Simpan Pengaturan Donasi
-                            </button>
-                        </div>
-
-                        <!-- Manual Add Donor -->
-                        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
-                            <h5 class="font-bold text-sm text-gray-800 border-b pb-2">Tambah Catatan Donatur Manual</h5>
-                            <div class="grid sm:grid-cols-2 gap-4">
-                                <input type="text" id="admin-manual-donor-name" placeholder="Nama Donatur" class="text-xs p-2.5 border rounded-xl">
-                                <input type="number" id="admin-manual-donor-amount" placeholder="Nominal Rp" class="text-xs p-2.5 border rounded-xl">
-                            </div>
-                            <button onclick="addManualDonor()" class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">
-                                <i class="fa-solid fa-plus mr-1"></i> Catat Donasi Masuk
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- TAB 6: SETTINGS -->
-                    <div id="admin-tab-pengaturan" class="admin-tab-content hidden space-y-6">
-                        <h4 class="font-heading font-bold text-xl text-gray-900">Pengaturan Teks Website</h4>
-
-                        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
-                            <div class="grid sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-700 mb-1">Nama Organisasi</label>
-                                    <input type="text" id="admin-site-name-input" class="w-full text-xs p-2.5 border rounded-xl">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-gray-700 mb-1">Wilayah RT/RW</label>
-                                    <input type="text" id="admin-site-rt-input" class="w-full text-xs p-2.5 border rounded-xl">
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Kategori</label>
+                                    <select id="input-berita-kategori" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                        <option value="Pengumuman">Pengumuman</option>
+                                        <option value="Kegiatan Sosial">Kegiatan Sosial</option>
+                                        <option value="Olahraga">Olahraga</option>
+                                        <option value="Seni & Budaya">Seni & Budaya</option>
+                                    </select>
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 mb-1">Judul Utama (Hero Title)</label>
-                                <input type="text" id="admin-hero-title-input" class="w-full text-xs p-2.5 border rounded-xl">
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Header Gambar URL</label>
+                                <input type="url" id="input-berita-gambar" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-gray-700 mb-1">Sub-judul Hero (Deskripsi)</label>
-                                <textarea id="admin-hero-subtitle-input" rows="2" class="w-full text-xs p-2.5 border rounded-xl"></textarea>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Isi Berita Lengkap</label>
+                                <textarea id="input-berita-isi" rows="4" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300"></textarea>
                             </div>
-                            <div>
-                                <label class="block text-xs font-bold text-gray-700 mb-1">Nomor WA Konfirmasi Hotline</label>
-                                <input type="text" id="admin-wa-hotline-input" class="w-full text-xs p-2.5 border rounded-xl">
+                            <div class="flex justify-end gap-2 pt-2">
+                                <button type="button" onclick="closeFormBerita()" class="px-3 py-1.5 bg-slate-200 text-slate-700 rounded-lg text-xs font-bold">Batal</button>
+                                <button type="submit" class="px-4 py-1.5 bg-brand-600 text-white rounded-lg text-xs font-bold">Simpan Berita</button>
                             </div>
-                            <div>
-                                <label class="block text-xs font-bold text-gray-700 mb-1">Alamat Sekretariat Lengkap</label>
-                                <textarea id="admin-address-input" rows="2" class="w-full text-xs p-2.5 border rounded-xl"></textarea>
-                            </div>
-                            <button onclick="saveSiteSettings()" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition">
-                                Simpan Semua Perubahan Teks
-                            </button>
+                        </form>
+
+                        <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+                            <table class="w-full text-left text-xs text-slate-600">
+                                <thead class="bg-slate-50 text-slate-800 font-bold border-b border-slate-200">
+                                    <tr>
+                                        <th class="p-3">Gambar</th>
+                                        <th class="p-3">Judul</th>
+                                        <th class="p-3">Kategori</th>
+                                        <th class="p-3">Tanggal</th>
+                                        <th class="p-3 text-right">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-table-berita" class="divide-y divide-slate-100"></tbody>
+                            </table>
                         </div>
                     </div>
 
-                </main>
-            </div>
+                    <!-- Tab: Dokumentasi -->
+                    <div id="admin-tab-dokumentasi" class="admin-content space-y-6 hidden">
+                        <div class="flex justify-between items-center border-b pb-4">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Kelola Galeri Foto</h4>
+                                <p class="text-xs text-slate-500">Upload tautan foto dokumentasi kegiatan</p>
+                            </div>
+                            <button onclick="openFormGaleri()" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold flex items-center gap-2 shadow-sm">
+                                <i class="fa-solid fa-plus"></i> Tambah Foto
+                            </button>
+                        </div>
 
+                        <form id="form-galeri" onsubmit="saveGaleri(event)" class="hidden bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Judul / Caption Foto</label>
+                                    <input type="text" id="input-galeri-judul" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Kategori Filter</label>
+                                    <select id="input-galeri-kategori" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                        <option value="Gotong Royong">Gotong Royong</option>
+                                        <option value="Olahraga">Olahraga</option>
+                                        <option value="Keagamaan">Keagamaan</option>
+                                        <option value="Seni/Budaya">Seni/Budaya</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">URL Gambar Foto</label>
+                                <input type="url" id="input-galeri-url" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                            </div>
+                            <div class="flex justify-end gap-2 pt-2">
+                                <button type="button" onclick="closeFormGaleri()" class="px-3 py-1.5 bg-slate-200 text-slate-700 rounded-lg text-xs font-bold">Batal</button>
+                                <button type="submit" class="px-4 py-1.5 bg-brand-600 text-white rounded-lg text-xs font-bold">Simpan Foto</button>
+                            </div>
+                        </form>
+
+                        <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+                            <table class="w-full text-left text-xs text-slate-600">
+                                <thead class="bg-slate-50 text-slate-800 font-bold border-b border-slate-200">
+                                    <tr>
+                                        <th class="p-3">Preview</th>
+                                        <th class="p-3">Caption</th>
+                                        <th class="p-3">Kategori</th>
+                                        <th class="p-3 text-right">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-table-galeri" class="divide-y divide-slate-100"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Donasi -->
+                    <div id="admin-tab-donasi" class="admin-content space-y-6 hidden">
+                        <div class="border-b pb-4">
+                            <h4 class="font-bold text-slate-900 text-lg">Pengaturan Program Donasi</h4>
+                            <p class="text-xs text-slate-500">Atur nominal terkumpul, target, & nomor rekening</p>
+                        </div>
+
+                        <form onsubmit="saveDonasiSettings(event)" class="space-y-4 max-w-xl">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Judul Program Kegiatan</label>
+                                <input type="text" id="admin-donasi-judul" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Deskripsi Program</label>
+                                <textarea id="admin-donasi-deskripsi" rows="3" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300"></textarea>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Target Dana (Rp)</label>
+                                    <input type="number" id="admin-donasi-target" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Terkumpul Manual (Rp)</label>
+                                    <input type="number" id="admin-donasi-terkumpul" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Rekening Transfer & Bank</label>
+                                <input type="text" id="admin-donasi-rekening" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">URL Gambar QRIS</label>
+                                <input type="url" id="admin-donasi-qris" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                            </div>
+                            <button type="submit" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold shadow-md">
+                                Update Data Donasi
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- ADMIN TAB: SOSIAL MEDIA MANAGEMENT -->
+                    <div id="admin-tab-sosmed" class="admin-content space-y-6 hidden">
+                        <div class="border-b pb-4">
+                            <h4 class="font-bold text-slate-900 text-lg">Kelola Akun Sosial Media 8vibes</h4>
+                            <p class="text-xs text-slate-500">Atur link sosial media & aktifkan/nonaktifkan ikon sosmed yang muncul di web publik</p>
+                        </div>
+
+                        <form onsubmit="saveSosmedSettings(event)" class="space-y-4 max-w-3xl">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <!-- Instagram -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                                            <i class="fa-brands fa-instagram text-pink-600 text-base"></i> Instagram
+                                        </span>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" id="sosmed-active-instagram" class="sr-only peer">
+                                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand-600"></div>
+                                        </label>
+                                    </div>
+                                    <input type="url" id="sosmed-url-instagram" placeholder="https://instagram.com/8vibes" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+
+                                <!-- TikTok -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                                            <i class="fa-brands fa-tiktok text-slate-900 text-base"></i> TikTok
+                                        </span>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" id="sosmed-active-tiktok" class="sr-only peer">
+                                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand-600"></div>
+                                        </label>
+                                    </div>
+                                    <input type="url" id="sosmed-url-tiktok" placeholder="https://tiktok.com/@8vibes" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+
+                                <!-- YouTube -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                                            <i class="fa-brands fa-youtube text-red-600 text-base"></i> YouTube
+                                        </span>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" id="sosmed-active-youtube" class="sr-only peer">
+                                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand-600"></div>
+                                        </label>
+                                    </div>
+                                    <input type="url" id="sosmed-url-youtube" placeholder="https://youtube.com/@8vibes" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+
+                                <!-- Facebook -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                                            <i class="fa-brands fa-facebook text-blue-600 text-base"></i> Facebook
+                                        </span>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" id="sosmed-active-facebook" class="sr-only peer">
+                                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand-600"></div>
+                                        </label>
+                                    </div>
+                                    <input type="url" id="sosmed-url-facebook" placeholder="https://facebook.com/karangtaruna8vibes" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+
+                                <!-- WhatsApp -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                                            <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i> WhatsApp Contact / Group
+                                        </span>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" id="sosmed-active-whatsapp" class="sr-only peer">
+                                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand-600"></div>
+                                        </label>
+                                    </div>
+                                    <input type="url" id="sosmed-url-whatsapp" placeholder="https://wa.me/6281234567890" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+
+                                <!-- X / Twitter -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                                            <i class="fa-brands fa-x-twitter text-slate-900 text-base"></i> X (Twitter)
+                                        </span>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" id="sosmed-active-twitter" class="sr-only peer">
+                                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand-600"></div>
+                                        </label>
+                                    </div>
+                                    <input type="url" id="sosmed-url-twitter" placeholder="https://x.com/8vibes" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+
+                                <!-- Spotify -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                                            <i class="fa-brands fa-spotify text-emerald-500 text-base"></i> Spotify / Podcast
+                                        </span>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" id="sosmed-active-spotify" class="sr-only peer">
+                                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand-600"></div>
+                                        </label>
+                                    </div>
+                                    <input type="url" id="sosmed-url-spotify" placeholder="https://spotify.com" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+
+                                <!-- Email -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                                            <i class="fa-solid fa-envelope text-brand-600 text-base"></i> Email Resmi
+                                        </span>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" id="sosmed-active-email" class="sr-only peer">
+                                            <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand-600"></div>
+                                        </label>
+                                    </div>
+                                    <input type="text" id="sosmed-url-email" placeholder="mailto:sekretariat@8vibes.org" class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                                </div>
+                            </div>
+
+                            <div class="pt-4">
+                                <button type="submit" class="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold shadow-md transition-all">
+                                    Simpan Perubahan Sosial Media
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Tab: Media & Gambar -->
+                    <div id="admin-tab-media" class="admin-content space-y-6 hidden">
+                        <div class="border-b pb-4">
+                            <h4 class="font-bold text-slate-900 text-lg">Kelola Logo & Gambar Web</h4>
+                            <p class="text-xs text-slate-500">Atur slogan dan gambar utama situs</p>
+                        </div>
+
+                        <form onsubmit="saveMediaSettings(event)" class="space-y-4 max-w-xl">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Slogan Hero Section</label>
+                                <textarea id="admin-slogan" rows="2" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">URL Logo 8vibes</label>
+                                <input type="url" id="admin-logo-url" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">URL Banner Utama Hero</label>
+                                <input type="url" id="admin-hero-img-url" required class="w-full px-3 py-2 text-xs rounded-lg border border-slate-300">
+                            </div>
+                            <button type="submit" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-bold shadow-md">
+                                Perbarui Gambar Web
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!-- SUB-MODAL: FORM PENGURUS -->
-    <div id="org-form-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-xl">
-            <h4 class="font-heading font-bold text-lg text-gray-900 mb-4" id="org-form-title">Tambah Pengurus</h4>
-            <input type="hidden" id="org-edit-index" value="-1">
-            <div class="space-y-3 text-xs">
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">Nama Lengkap & Gelar</label>
-                    <input type="text" id="org-input-name" placeholder="Contoh: Nardeliah, S.Pd" class="w-full p-2.5 border rounded-xl">
-                </div>
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">Jabatan</label>
-                    <input type="text" id="org-input-role" placeholder="Contoh: Ketua Umum" class="w-full p-2.5 border rounded-xl">
-                </div>
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">Kelompok Posisi</label>
-                    <select id="org-input-tier" class="w-full p-2.5 border rounded-xl bg-white">
-                        <option value="utama">Pengurus Inti (Atas/Ketua)</option>
-                        <option value="sub">Divisi / Seksi (Bawah)</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">URL Foto Profile</label>
-                    <input type="text" id="org-input-photo" placeholder="https://..." class="w-full p-2.5 border rounded-xl">
-                </div>
-            </div>
-            <div class="mt-5 flex justify-end space-x-2">
-                <button onclick="closeOrgFormModal()" class="px-4 py-2 bg-gray-200 text-gray-700 text-xs font-bold rounded-xl">Batal</button>
-                <button onclick="saveOrgMember()" class="px-4 py-2 bg-brand-700 text-white text-xs font-bold rounded-xl">Simpan Data</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- SUB-MODAL: FORM BERITA -->
-    <div id="news-form-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative shadow-xl max-h-[90vh] overflow-y-auto custom-scrollbar">
-            <h4 class="font-heading font-bold text-lg text-gray-900 mb-4" id="news-form-title">Tambah Berita Baru</h4>
-            <input type="hidden" id="news-edit-index" value="-1">
-            <div class="space-y-3 text-xs">
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">Judul Berita/Kegiatan</label>
-                    <input type="text" id="news-input-title" placeholder="Judul artikel" class="w-full p-2.5 border rounded-xl">
-                </div>
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">Kategori</label>
-                    <select id="news-input-category" class="w-full p-2.5 border rounded-xl bg-white">
-                        <option value="Sosial">Sosial</option>
-                        <option value="Agenda">Agenda</option>
-                        <option value="Olahraga">Olahraga</option>
-                        <option value="Keagamaan">Keagamaan</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">Tanggal Kegiatan</label>
-                    <input type="text" id="news-input-date" placeholder="Contoh: 12 Oktober 2026" class="w-full p-2.5 border rounded-xl">
-                </div>
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">URL Gambar Sampul</label>
-                    <input type="text" id="news-input-image" placeholder="https://..." class="w-full p-2.5 border rounded-xl">
-                </div>
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">Isi Konten Berita Lengkap</label>
-                    <textarea id="news-input-content" rows="5" class="w-full p-2.5 border rounded-xl"></textarea>
-                </div>
-            </div>
-            <div class="mt-5 flex justify-end space-x-2">
-                <button onclick="closeNewsFormModal()" class="px-4 py-2 bg-gray-200 text-gray-700 text-xs font-bold rounded-xl">Batal</button>
-                <button onclick="saveNewsArticle()" class="px-4 py-2 bg-brand-700 text-white text-xs font-bold rounded-xl">Simpan Berita</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- SUB-MODAL: FORM GALERI -->
-    <div id="gallery-form-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-xl">
-            <h4 class="font-heading font-bold text-lg text-gray-900 mb-4">Tambah Foto Galeri</h4>
-            <div class="space-y-3 text-xs">
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">Judul Foto / Deskripsi Singkat</label>
-                    <input type="text" id="gallery-input-caption" placeholder="Contoh: Rapat Pemuda RT 08" class="w-full p-2.5 border rounded-xl">
-                </div>
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">Kategori Foto</label>
-                    <select id="gallery-input-category" class="w-full p-2.5 border rounded-xl bg-white">
-                        <option value="Kerja Bakti">Kerja Bakti</option>
-                        <option value="Olahraga">Olahraga</option>
-                        <option value="Keagamaan">Keagamaan</option>
-                        <option value="Sosial">Sosial</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block font-bold mb-1 text-gray-700">URL Image Foto</label>
-                    <input type="text" id="gallery-input-url" placeholder="https://..." class="w-full p-2.5 border rounded-xl">
-                </div>
-            </div>
-            <div class="mt-5 flex justify-end space-x-2">
-                <button onclick="closeGalleryFormModal()" class="px-4 py-2 bg-gray-200 text-gray-700 text-xs font-bold rounded-xl">Batal</button>
-                <button onclick="saveGalleryPhoto()" class="px-4 py-2 bg-brand-700 text-white text-xs font-bold rounded-xl">Simpan Foto</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- TOAST NOTIFICATION -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-gray-900 text-white text-xs sm:text-sm font-medium px-4 py-3 rounded-xl shadow-2xl hidden flex items-center space-x-2 border border-gray-700">
-        <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
-        <span id="toast-message">Pesan Toast</span>
     </div>
 
     <script>
-        /* INITIAL DATA STRUCTURES WITH LOCALSTORAGE PERSISTENCE */
+        const DEFAULT_ADMIN_PASS = "admin8vibes";
 
-        const DEFAULT_ORG = [
-            { name: "Nardeliah, S.Pd", role: "Ketua Umum 8Vibes", tier: "utama", photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" },
-            { name: "Siti Rahmawati", role: "Sekretaris Utama", tier: "sub", photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" },
-            { name: "Ahmad Rizky", role: "Bendahara Kas", tier: "sub", photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" },
-            { name: "Dimas Prasetyo", role: "Koordinator Humas", tier: "sub", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" },
-            { name: "Eka Putri", role: "Koordinator Olahraga & Seni", tier: "sub", photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" }
-        ];
-
-        const DEFAULT_NEWS = [
-            {
-                title: "Kerja Bakti & Bersih Saluran Sememi RT 08",
-                category: "Sosial",
-                date: "12 Oktober 2026",
-                image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=800&q=80",
-                content: "Kegiatan kerja bakti rutin dihadiri oleh puluhan pemuda Karang Taruna 8Vibes bersama seluruh bapak-bapak warga RT 08 Sememi. Fokus utama meliputi pembersihan saluran air drainase, perapian dahan pohon, serta pengecatan ulang pos warga."
+        // Initial Mock Data Structure
+        const initialData = {
+            slogan: "Wadah kreasi, kolaborasi, dan kontribusi pemuda-pemudi 8vibes untuk membangun lingkungan yang harmonis, kreatif, dan penuh energi positif.",
+            logoUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=120&q=80",
+            heroBannerUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80",
+            
+            sosmed: {
+                instagram: { active: true, url: "https://instagram.com", icon: "fa-brands fa-instagram" },
+                tiktok: { active: true, url: "https://tiktok.com", icon: "fa-brands fa-tiktok" },
+                youtube: { active: true, url: "https://youtube.com", icon: "fa-brands fa-youtube" },
+                facebook: { active: true, url: "https://facebook.com", icon: "fa-brands fa-facebook" },
+                whatsapp: { active: true, url: "https://wa.me/6281234567890", icon: "fa-brands fa-whatsapp" },
+                twitter: { active: false, url: "https://x.com", icon: "fa-brands fa-x-twitter" },
+                spotify: { active: false, url: "https://spotify.com", icon: "fa-brands fa-spotify" },
+                email: { active: true, url: "mailto:sekretariat@8vibes.org", icon: "fa-solid fa-envelope" }
             },
-            {
-                title: "Turnamen Badminton Antar Warga Sememi",
-                category: "Agenda",
-                date: "20 Oktober 2026",
-                image: "https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80",
-                content: "Guna mempererat tali silaturahmi antar pemuda dan warga, Karang Taruna 8Vibes menggelar Turnamen Badminton Ganda Putra & Putri. Pendaftaran dibuka tanpa dipungut biaya bagi seluruh warga Sememi RT 08."
+
+            struktur: [
+                { id: 1, nama: "Rizky Ramadhan", jabatan: "Ketua Karang Taruna", foto: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80", instagram: "@rizky8vibes" },
+                { id: 2, nama: "Anisa Rahma", jabatan: "Wakil Ketua", foto: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80", instagram: "@anisa_8v" },
+                { id: 3, nama: "Bagas Pratama", jabatan: "Sekretaris Umum", foto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80", instagram: "@bagaspratama" },
+                { id: 4, nama: "Siti Nurhaliza", jabatan: "Bendahara Organisasi", foto: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80", instagram: "@sitinur_8v" }
+            ],
+
+            berita: [
+                {
+                    id: 1,
+                    judul: "Kerja Bakti Massal & Penghijauan Taman RW",
+                    kategori: "Kegiatan Sosial",
+                    tanggal: "12 Oktober 2026",
+                    gambar: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=600&q=80",
+                    isi: "Karang Taruna 8vibes sukses menggelar kerja bakti bersama warga untuk membersihkan fasilitas publik serta menanam 100 bibit pohon produktif demi wujud lingkungan hijau dan asri."
+                },
+                {
+                    id: 2,
+                    judul: "Turnamen Bulutangkis Pemuda 8vibes Cup",
+                    kategori: "Olahraga",
+                    tanggal: "28 September 2026",
+                    gambar: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80",
+                    isi: "Turnamen tahunan yang mempertemukan ganda putra dan putri pemuda antar-RT. Berjalan sportif dan meriah dihadiri ratusan penonton warga."
+                },
+                {
+                    id: 3,
+                    judul: "Peringatan Hari Pemuda & Panggung Kesenian",
+                    kategori: "Seni & Budaya",
+                    tanggal: "15 September 2026",
+                    gambar: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80",
+                    isi: "Pentaskan berbagai penampilan karya seni musik, tarian daerah, serta bazaar UMKM binaan karang taruna."
+                }
+            ],
+
+            galeri: [
+                { id: 1, judul: "Gotong Royong Bersih RW", kategori: "Gotong Royong", url: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=600&q=80" },
+                { id: 2, judul: "Final Badminton Match", kategori: "Olahraga", url: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80" },
+                { id: 3, judul: "Kajian Rutin Pemuda", kategori: "Keagamaan", url: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" },
+                { id: 4, judul: "Pentas Musik Lokal", kategori: "Seni/Budaya", url: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=600&q=80" }
+            ],
+
+            donasi: {
+                judul: "Penggalangan Dana HUT Karang Taruna & Bakti Sosial",
+                deskripsi: "Dana yang terkumpul digunakan untuk operasional acara kesenian pemuda, santunan warga lansia, serta pembelian alat-alat kebersihan & olahraga.",
+                target: 15000000,
+                terkumpul: 8750000,
+                rekening: "Mandiri: 123-000-8VIBES-88",
+                qrisUrl: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=KARANGTARUNA8VIBES"
             },
-            {
-                title: "Santunan Anak Yatim & Doa Bersama",
-                category: "Sosial",
-                date: "28 September 2026",
-                image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
-                content: "Berkat donasi dan partisipasi warga, Karang Taruna 8Vibes telah menyalurkan bantuan berupa alat tulis, perlengkapan sekolah, dan santunan tunai kepada anak-anak yatim piatu di kawasan Sememi RT 08."
-            }
-        ];
 
-        const DEFAULT_GALLERY = [
-            { caption: "Malam Puncak HUT RI RT 08", category: "Sosial", image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" },
-            { caption: "Rapat Rutin Kepemudaan 8Vibes", category: "Keagamaan", image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" },
-            { caption: "Lomba Olahraga Futsal Pemuda", category: "Olahraga", image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" },
-            { caption: "Bakti Sosial & Penghijauan", category: "Kerja Bakti", image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=800&q=80" }
-        ];
-
-        const DEFAULT_DONATIONS = {
-            target: 10000000,
-            collected: 4750000,
-            bca: "8290 1823 99",
-            mandiri: "1420 0192 8812 3",
-            donors: [
-                { name: "Hamba Allah", amount: 250000, date: "Hari ini" },
-                { name: "Bpk. Hendra RT 08", amount: 500000, date: "Kemarin" },
-                { name: "Ibu Nurul", amount: 100000, date: "3 hari lalu" }
+            donaturList: [
+                { nama: "Hamba Allah", nominal: 250000, pesan: "Semoga barokah untuk seluruh warga" },
+                { nama: "Bpk. Rahmat", nominal: 500000, pesan: "Maju terus pemuda 8vibes!" }
             ]
         };
 
-        const DEFAULT_SETTINGS = {
-            siteName: "8Vibes",
-            siteRt: "Sememi RT 08",
-            heroTitle: "Wadah Inovasi & Aksi Pemuda 8Vibes",
-            heroSubtitle: "Menggerakkan potensi generasi muda RT 08 Sememi melalui kegiatan sosial, olahraga, kreasi seni, dan kerja bakti lingkungan menuju masyarakat yang solid dan sejahtera.",
-            waHotline: "+62 812-3456-7890",
-            address: "Balai RW / Pos RT 08 Sememi, Kecamatan Benowo, Kota Surabaya, Jawa Timur 60198."
-        };
-
-        /* Application Data State Holders */
-        let state = {
-            org: [],
-            news: [],
-            gallery: [],
-            donations: {},
-            settings: {},
-            isAdminLoggedIn: false
-        };
-
-        /* Load State from Firebase or Load Defaults */
-        function loadApplicationState() {
-            state.isAdminLoggedIn = localStorage.getItem('8vibes_admin_logged') === 'true';
-
-            db.ref('app_data').on('value', (snapshot) => {
-                const data = snapshot.val();
-
-                if (data) {
-                    state.org = data.orgStructure || [...DEFAULT_ORG];
-                    state.news = data.newsList || [...DEFAULT_NEWS];
-                    state.gallery = data.galleryList || [...DEFAULT_GALLERY];
-                    state.donations = data.donationsList || { ...DEFAULT_DONATIONS };
-                    state.settings = {
-                        ...DEFAULT_SETTINGS,
-                        ...(data.settings || {}),
-                        ...(data.hero || {})
-                    };
-                } else {
-                    state.org = [...DEFAULT_ORG];
-                    state.news = [...DEFAULT_NEWS];
-                    state.gallery = [...DEFAULT_GALLERY];
-                    state.donations = { ...DEFAULT_DONATIONS };
-                    state.settings = { ...DEFAULT_SETTINGS };
+        function getAppData() {
+            try {
+                const data = localStorage.getItem('8vibes_app_data_v2');
+                if (!data) {
+                    localStorage.setItem('8vibes_app_data_v2', JSON.stringify(initialData));
+                    return initialData;
                 }
-
-                renderPublicWebsite();
-                renderAdminDashboard();
-            }, (error) => {
-                console.error('Gagal memuat data dari Firebase:', error);
-                showToast('Gagal memuat data dari Firebase.');
-            });
+                return JSON.parse(data);
+            } catch (err) {
+                console.error("LocalStorage error:", err);
+                return initialData;
+            }
         }
 
-        function saveStateToStorage(key, data) {
-            localStorage.setItem(key, JSON.stringify(data));
-            renderPublicWebsite();
-            renderAdminDashboard();
-
-            const payload = {
-                orgStructure: state.org,
-                newsList: state.news,
-                galleryList: state.gallery,
-                donationsList: state.donations,
-                hero: state.settings,
-                lastUpdated: new Date().toISOString()
-            };
-
-            db.ref('app_data').set(payload)
-                .then(() => {
-                    console.log('Data berhasil diperbarui untuk semua user!');
-                })
-                .catch((error) => {
-                    console.error('Gagal menyimpan ke Firebase:', error);
-                    alert('Gagal menyimpan data ke server.');
-                });
+        function saveAppData(data) {
+            try {
+                localStorage.setItem('8vibes_app_data_v2', JSON.stringify(data));
+                renderAllViews();
+            } catch (err) {
+                console.error("Error saving to localStorage:", err);
+            }
         }
 
-        /* RENDER PUBLIC WEBSITE */
-        function renderPublicWebsite() {
-            // Text Settings
-            document.getElementById('site-logo-text').innerText = state.settings.siteName;
-            document.getElementById('site-rt-text').innerText = state.settings.siteRt;
-            document.getElementById('hero-badge-text').innerText = `Karang Taruna ${state.settings.siteRt}`;
-            document.getElementById('hero-title').innerHTML = state.settings.heroTitle;
-            document.getElementById('hero-subtitle').innerText = state.settings.heroSubtitle;
-            document.getElementById('display-address-text').innerText = state.settings.address;
-            document.getElementById('display-wa-hotline').innerText = state.settings.waHotline;
-
-            // Stats Counters
-            document.getElementById('stat-news-count').innerText = state.news.length;
-            document.getElementById('stat-photos-count').innerText = state.gallery.length;
-
-            // Render Org Structure
-            renderOrgPublic();
-
-            // Render News Cards
-            renderNewsPublic('semua');
-
-            // Render Gallery Photos
-            renderGalleryPublic('semua');
-
-            // Render Donation Data
-            renderDonationPublic();
+        function resetDataToDefault() {
+            if (confirm("Reset seluruh data ke pengaturan awal?")) {
+                localStorage.setItem('8vibes_app_data_v2', JSON.stringify(initialData));
+                renderAllViews();
+                populateAdminForms();
+                alert("Data berhasil direset!");
+            }
         }
 
-        /* Render Organization Structure (Public) */
-        function renderOrgPublic() {
-            const container = document.getElementById('org-structure-container');
-            const mainLeader = state.org.find(o => o.tier === 'utama');
-            const subLeaders = state.org.filter(o => o.tier === 'sub');
+        function promptAdminLogin() {
+            const pass = prompt("Masukkan Passcode Admin\n(Passcode Demo: admin8vibes):");
+            if (pass === DEFAULT_ADMIN_PASS) {
+                openAdminModal();
+            } else if (pass !== null) {
+                alert("Passcode Admin Salah!");
+            }
+        }
 
-            let html = '';
+        function openAdminModal() {
+            populateAdminForms();
+            const modal = document.getElementById('modal-admin');
+            if (modal) {
+                modal.classList.remove('hidden');
+            }
+        }
 
-            if (mainLeader) {
-                html += `
-                <div class="flex flex-col items-center mb-12">
-                    <div class="bg-gradient-to-br from-brand-700 via-brand-800 to-brand-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl max-w-sm w-full text-center relative transform transition hover:-translate-y-1 border border-brand-600">
-                        <div class="absolute top-3 right-3 bg-white/20 text-white text-[10px] uppercase font-bold px-3 py-1 rounded-full backdrop-blur-sm">Ketua Umum</div>
-                        <div class="w-28 h-28 rounded-full border-4 border-white/30 mx-auto overflow-hidden mb-4 shadow-lg bg-rose-100">
-                            <img src="${mainLeader.photo}" alt="${mainLeader.name}" class="w-full h-full object-cover">
+        function closeAdminModal() {
+            const modal = document.getElementById('modal-admin');
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
+
+        function renderAllViews() {
+            const data = getAppData();
+
+            // Brand & Banner
+            document.getElementById('hero-slogan').innerText = data.slogan;
+            document.getElementById('app-logo').src = data.logoUrl;
+            document.getElementById('footer-logo').src = data.logoUrl;
+            document.getElementById('hero-banner-img').src = data.heroBannerUrl;
+
+            // Render Sosmed
+            renderSocialMediaViews(data.sosmed);
+
+            // Render Struktur
+            const strukturContainer = document.getElementById('struktur-container');
+            if (strukturContainer) {
+                strukturContainer.innerHTML = data.struktur.map(item => `
+                    <div class="glass-card rounded-3xl p-5 text-center hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 relative">
+                        <div class="relative w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300 border-2 border-brand-500/20">
+                            <img src="${item.foto}" alt="${item.nama}" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="font-heading text-xl font-bold">${mainLeader.name}</h3>
-                        <p class="text-rose-200 text-sm font-medium mt-1">${mainLeader.role}</p>
+                        <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-600 transition-colors">${item.nama}</h4>
+                        <p class="text-xs font-semibold text-brand-600 bg-brand-50 px-3 py-1 rounded-full inline-block mt-2 border border-brand-100">${item.jabatan}</p>
+                        ${item.instagram ? `
+                            <div class="mt-3">
+                                <a href="https://instagram.com/${item.instagram.replace('@','')}" target="_blank" class="text-xs text-slate-400 hover:text-pink-600 transition-colors inline-flex items-center gap-1 font-medium">
+                                    <i class="fa-brands fa-instagram"></i> ${item.instagram}
+                                </a>
+                            </div>
+                        ` : ''}
                     </div>
-                </div>`;
+                `).join('');
             }
 
-            if (subLeaders.length > 0) {
-                html += `<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">`;
-                subLeaders.forEach(item => {
-                    html += `
-                    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 hover:border-brand-600 transition shadow-sm hover:shadow-md flex items-center space-x-4">
-                        <img src="${item.photo}" class="w-14 h-14 rounded-full object-cover border-2 border-brand-700 shrink-0">
-                        <div>
-                            <span class="text-[10px] font-bold text-brand-700 uppercase tracking-wider">${item.role}</span>
-                            <h4 class="font-bold text-gray-900 text-sm leading-snug">${item.name}</h4>
-                        </div>
-                    </div>`;
-                });
-                html += `</div>`;
-            }
+            // Render Berita
+            renderNewsCards(data.berita);
 
-            container.innerHTML = html;
+            // Render Galeri
+            renderGalleryGrid(data.galeri);
+
+            // Render Donasi
+            document.getElementById('donasi-judul').innerText = data.donasi.judul;
+            document.getElementById('donasi-deskripsi').innerText = data.donasi.deskripsi;
+            document.getElementById('donasi-terkumpul-text').innerText = 'Rp ' + data.donasi.terkumpul.toLocaleString('id-ID');
+            document.getElementById('donasi-target-text').innerText = 'Rp ' + data.donasi.target.toLocaleString('id-ID');
+            document.getElementById('donasi-rekening').innerText = data.donasi.rekening;
+            document.getElementById('donasi-qris-img').src = data.donasi.qrisUrl;
+
+            const percent = Math.min(Math.round((data.donasi.terkumpul / data.donasi.target) * 100), 100);
+            document.getElementById('donasi-progress-bar').style.width = percent + '%';
+            document.getElementById('donasi-persen-text').innerText = percent + '% Ketercapaian';
+
+            // Render Donatur List
+            document.getElementById('donatur-list').innerHTML = data.donaturList.map(item => `
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-start justify-between text-xs">
+                    <div>
+                        <p class="font-bold text-slate-800">${item.nama}</p>
+                        <p class="text-[11px] text-slate-500 italic">"${item.pesan || 'Terima kasih 8vibes!'}"</p>
+                    </div>
+                    <span class="font-black text-brand-600 bg-brand-50 px-2 py-0.5 rounded border border-brand-100">
+                        +Rp ${item.nominal.toLocaleString('id-ID')}
+                    </span>
+                </div>
+            `).join('');
+
+            // Update Stats Dashboard & Tables
+            updateStatsOverview(data);
+            renderAdminTables(data);
         }
 
-        /* Render News (Public) */
-        function renderNewsPublic(filterCategory) {
-            const container = document.getElementById('news-grid-container');
-            let filtered = state.news;
-            if (filterCategory !== 'semua') {
-                filtered = state.news.filter(n => n.category.toLowerCase() === filterCategory.toLowerCase());
+        function renderSocialMediaViews(sosmed) {
+            const heroContainer = document.getElementById('hero-socials-container');
+            const footerContainer = document.getElementById('footer-socials-container');
+
+            let heroHtml = '';
+            let footerHtml = '';
+
+            if (sosmed) {
+                Object.keys(sosmed).forEach(key => {
+                    const item = sosmed[key];
+                    if (item && item.active && item.url) {
+                        heroHtml += `
+                            <a href="${item.url}" target="_blank" class="w-9 h-9 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-white hover:bg-brand-600 hover:border-brand-600 flex items-center justify-center text-sm shadow-sm hover:scale-110 transition-all">
+                                <i class="${item.icon}"></i>
+                            </a>
+                        `;
+                        footerHtml += `
+                            <a href="${item.url}" target="_blank" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-600 flex items-center justify-center text-xs transition-colors">
+                                <i class="${item.icon}"></i>
+                            </a>
+                        `;
+                    }
+                });
             }
 
-            if (filtered.length === 0) {
-                container.innerHTML = `<p class="col-span-full text-center text-gray-400 py-8">Belum ada berita dalam kategori ini.</p>`;
+            if (heroContainer) heroContainer.innerHTML = heroHtml || '<span class="text-xs text-slate-400">Belum ada sosmed aktif</span>';
+            if (footerContainer) footerContainer.innerHTML = footerHtml || '<span class="text-xs text-slate-500">Belum ada sosmed aktif</span>';
+        }
+
+        function renderNewsCards(newsList) {
+            const container = document.getElementById('berita-container');
+            if (!container) return;
+            if (!newsList || newsList.length === 0) {
+                container.innerHTML = `<p class="col-span-3 text-center text-xs text-slate-400 py-8">Tidak ada berita ditemukan.</p>`;
                 return;
             }
-
-            container.innerHTML = filtered.map((item, index) => `
-                <article class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+            container.innerHTML = newsList.map(item => `
+                <article class="bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="${item.image}" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 bg-brand-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow">${item.category}</span>
+                        <img src="${item.gambar}" alt="${item.judul}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-brand-600/90 backdrop-blur-md text-white text-[10px] font-extrabold rounded-full">
+                            ${item.kategori}
+                        </span>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <p class="text-xs text-gray-400 font-medium mb-2"><i class="fa-regular fa-calendar mr-1"></i> ${item.date}</p>
-                            <h3 class="font-heading text-lg font-bold text-gray-900 hover:text-brand-700 cursor-pointer transition line-clamp-2" onclick="openNewsModal(${index})">${item.title}</h3>
-                            <p class="text-gray-600 text-sm mt-2 line-clamp-2">${item.content}</p>
-                        </div>
-                        <button onclick="openNewsModal(${index})" class="mt-4 text-brand-700 font-bold text-sm inline-flex items-center space-x-1 hover:translate-x-1 transition">
-                            <span>Baca Selengkapnya</span>
-                            <i class="fa-solid fa-angle-right text-xs"></i>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-medium text-slate-400 mb-2"><i class="fa-regular fa-calendar mr-1"></i> ${item.tanggal}</span>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2 line-clamp-2 hover:text-brand-600 cursor-pointer" onclick="openModalBerita(${item.id})">${item.judul}</h4>
+                        <p class="text-xs text-slate-600 mb-6 line-clamp-2 leading-relaxed">${item.isi}</p>
+                        <button onclick="openModalBerita(${item.id})" class="mt-auto inline-flex items-center text-xs font-bold text-brand-600 hover:text-brand-800 transition-colors">
+                            Baca Selengkapnya <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                         </button>
                     </div>
                 </article>
             `).join('');
         }
 
-        function filterNews(cat) {
-            document.querySelectorAll('#news-filter-buttons .news-filter-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-700', 'text-white');
-                btn.classList.add('bg-white', 'text-gray-700');
+        function searchNews() {
+            const query = document.getElementById('news-search-input').value.toLowerCase();
+            const data = getAppData();
+            const filtered = data.berita.filter(b => b.judul.toLowerCase().includes(query) || b.isi.toLowerCase().includes(query));
+            renderNewsCards(filtered);
+        }
+
+        function renderGalleryGrid(items) {
+            const galeriContainer = document.getElementById('galeri-container');
+            if (!galeriContainer) return;
+            galeriContainer.innerHTML = items.map(item => `
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-md cursor-pointer h-52" onclick="openLightbox('${item.url}', '${item.judul}', '${item.kategori}')">
+                    <img src="${item.url}" alt="${item.judul}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+                        <span class="text-[10px] font-extrabold text-brand-300 uppercase">${item.kategori}</span>
+                        <h5 class="text-xs font-bold line-clamp-1">${item.judul}</h5>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterGallery(category) {
+            const data = getAppData();
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.className = "filter-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-brand-600 text-white shadow-sm";
+                } else {
+                    btn.className = "filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200";
+                }
             });
-            event.target.classList.add('bg-brand-700', 'text-white');
-            renderNewsPublic(cat);
-        }
 
-        /* Render Gallery (Public) */
-        function renderGalleryPublic(filterCategory) {
-            const container = document.getElementById('gallery-grid-container');
-            let filtered = state.gallery;
-            if (filterCategory !== 'semua') {
-                filtered = state.gallery.filter(g => g.category.toLowerCase() === filterCategory.toLowerCase());
-            }
-
-            if (filtered.length === 0) {
-                container.innerHTML = `<p class="col-span-full text-center text-gray-400 py-8">Belum ada foto dalam kategori ini.</p>`;
-                return;
-            }
-
-            container.innerHTML = filtered.map(item => `
-                <div class="relative group overflow-hidden rounded-2xl cursor-pointer shadow-sm border border-gray-100" onclick="openLightbox('${item.image}', '${item.caption}')">
-                    <img src="${item.image}" class="w-full h-56 object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-                        <p class="text-white font-semibold text-xs sm:text-sm">${item.caption}</p>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function filterGallery(cat) {
-            document.querySelectorAll('#gallery-filter-buttons .gallery-filter-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-700', 'text-white');
-                btn.classList.add('bg-white', 'text-gray-700');
-            });
-            event.target.classList.add('bg-brand-700', 'text-white');
-            renderGalleryPublic(cat);
-        }
-
-        /* Render Donation Data (Public) */
-        function renderDonationPublic() {
-            const d = state.donations;
-            document.getElementById('display-collected-amount').innerText = `Rp ${parseInt(d.collected).toLocaleString('id-ID')}`;
-            document.getElementById('display-target-amount').innerText = `Rp ${parseInt(d.target).toLocaleString('id-ID')}`;
-            document.getElementById('display-bca-acc').innerText = d.bca;
-            document.getElementById('display-mandiri-acc').innerText = d.mandiri;
-
-            const percentage = Math.min(100, Math.round((d.collected / d.target) * 100));
-            document.getElementById('donation-progress-bar').style.width = `${percentage}%`;
-            document.getElementById('display-percentage').innerText = `${percentage}% dari target tercapai`;
-
-            // Recent Donors List
-            const donorList = document.getElementById('recent-donors-list');
-            donorList.innerHTML = d.donors.map(donor => `
-                <div class="flex items-center justify-between p-2 bg-white rounded-lg border border-gray-100 text-xs">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-6 h-6 rounded-full bg-rose-100 text-brand-700 flex items-center justify-center font-bold text-[10px]">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <span class="font-bold text-gray-800">${donor.name}</span>
-                    </div>
-                    <span class="font-bold text-emerald-700">Rp ${parseInt(donor.amount).toLocaleString('id-ID')}</span>
-                </div>
-            `).join('');
-        }
-
-        /* RENDER ADMIN DASHBOARD TABLES & FORMS */
-        function renderAdminDashboard() {
-            if (!state.isAdminLoggedIn) return;
-
-            // Overview Stats
-            document.getElementById('dash-stat-members').innerText = state.org.length;
-            document.getElementById('dash-stat-news').innerText = state.news.length;
-            document.getElementById('dash-stat-photos').innerText = state.gallery.length;
-            document.getElementById('dash-stat-donations').innerText = `Rp ${parseInt(state.donations.collected).toLocaleString('id-ID')}`;
-
-            // Admin Org Table
-            document.getElementById('admin-org-table-body').innerHTML = state.org.map((item, idx) => `
-                <tr class="hover:bg-gray-50">
-                    <td class="p-3"><img src="${item.photo}" class="w-8 h-8 rounded-full object-cover"></td>
-                    <td class="p-3 font-bold">${item.name}</td>
-                    <td class="p-3">${item.role}</td>
-                    <td class="p-3"><span class="bg-rose-100 text-brand-800 px-2 py-0.5 rounded text-[10px] font-bold">${item.tier}</span></td>
-                    <td class="p-3 text-right space-x-1">
-                        <button onclick="editOrgMember(${idx})" class="p-1 text-blue-600 hover:text-blue-800"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button onclick="deleteOrgMember(${idx})" class="p-1 text-red-600 hover:text-red-800"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                </tr>
-            `).join('');
-
-            // Admin News Table
-            document.getElementById('admin-news-table-body').innerHTML = state.news.map((item, idx) => `
-                <tr class="hover:bg-gray-50">
-                    <td class="p-3"><img src="${item.image}" class="w-10 h-7 rounded object-cover"></td>
-                    <td class="p-3 font-bold">${item.title}</td>
-                    <td class="p-3">${item.category}</td>
-                    <td class="p-3 text-gray-500">${item.date}</td>
-                    <td class="p-3 text-right space-x-1">
-                        <button onclick="editNewsArticle(${idx})" class="p-1 text-blue-600 hover:text-blue-800"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button onclick="deleteNewsArticle(${idx})" class="p-1 text-red-600 hover:text-red-800"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                </tr>
-            `).join('');
-
-            // Admin Gallery Grid
-            document.getElementById('admin-gallery-grid-body').innerHTML = state.gallery.map((item, idx) => `
-                <div class="relative group rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm">
-                    <img src="${item.image}" class="w-full h-32 object-cover">
-                    <div class="p-2.5">
-                        <p class="font-bold text-xs truncate">${item.caption}</p>
-                        <p class="text-[10px] text-gray-400">${item.category}</p>
-                    </div>
-                    <button onclick="deleteGalleryPhoto(${idx})" class="absolute top-2 right-2 w-7 h-7 bg-red-600 text-white rounded-full flex items-center justify-center text-xs shadow hover:bg-red-700">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            `).join('');
-
-            // Populate Settings Inputs
-            document.getElementById('admin-target-amount-input').value = state.donations.target;
-            document.getElementById('admin-collected-amount-input').value = state.donations.collected;
-            document.getElementById('admin-bca-input').value = state.donations.bca;
-            document.getElementById('admin-mandiri-input').value = state.donations.mandiri;
-
-            document.getElementById('admin-site-name-input').value = state.settings.siteName;
-            document.getElementById('admin-site-rt-input').value = state.settings.siteRt;
-            document.getElementById('admin-hero-title-input').value = state.settings.heroTitle;
-            document.getElementById('admin-hero-subtitle-input').value = state.settings.heroSubtitle;
-            document.getElementById('admin-wa-hotline-input').value = state.settings.waHotline;
-            document.getElementById('admin-address-input').value = state.settings.address;
-        }
-
-        /* ADMIN AUTHENTICATION */
-        function toggleAdminModal() {
-            const modal = document.getElementById('admin-modal');
-            modal.classList.toggle('hidden');
-            if (!modal.classList.contains('hidden')) {
-                checkAdminAuthUI();
-            }
-        }
-
-        function authenticateAdmin() {
-            const pass = document.getElementById('admin-pass-input').value;
-            if (pass === 'Sememi8ViBes') {
-                state.isAdminLoggedIn = true;
-                localStorage.setItem('8vibes_admin_logged', 'true');
-                checkAdminAuthUI();
-                showToast('Login Admin berhasil!');
+            if (category === 'Semua') {
+                renderGalleryGrid(data.galeri);
             } else {
-                showToast('Password Admin salah! ');
+                renderGalleryGrid(data.galeri.filter(item => item.kategori === category));
             }
         }
 
-        function logoutAdmin() {
-            state.isAdminLoggedIn = false;
-            localStorage.setItem('8vibes_admin_logged', 'false');
-            checkAdminAuthUI();
-            showToast('Anda telah keluar dari Admin.');
+        function handleUserDonation(e) {
+            e.preventDefault();
+            const data = getAppData();
+            const nama = document.getElementById('donatur-nama').value;
+            const nominal = parseInt(document.getElementById('donatur-nominal').value);
+            const pesan = document.getElementById('donatur-pesan').value;
+
+            data.donasi.terkumpul += nominal;
+            data.donaturList.unshift({ nama, nominal, pesan });
+
+            saveAppData(data);
+            document.getElementById('form-donasi').reset();
+            alert("Terima kasih! Donasi Anda berhasil dicatat.");
         }
 
-        function checkAdminAuthUI() {
-            const loginView = document.getElementById('admin-login-view');
-            const dashView = document.getElementById('admin-dashboard-view');
-            const badge = document.getElementById('admin-login-badge');
-
-            if (state.isAdminLoggedIn) {
-                loginView.classList.add('hidden');
-                dashView.classList.remove('hidden');
-                badge.classList.remove('hidden');
-                renderAdminDashboard();
-            } else {
-                loginView.classList.remove('hidden');
-                dashView.classList.add('hidden');
-                badge.classList.add('hidden');
-            }
+        function updateStatsOverview(data) {
+            document.getElementById('stat-total-pengurus').innerText = data.struktur.length;
+            document.getElementById('stat-total-berita').innerText = data.berita.length;
+            document.getElementById('stat-total-galeri').innerText = data.galeri.length;
+            document.getElementById('stat-total-donasi').innerText = 'Rp ' + data.donasi.terkumpul.toLocaleString('id-ID');
         }
+
+        function openModalBerita(id) {
+            const data = getAppData();
+            const berita = data.berita.find(b => b.id === id);
+            if (!berita) return;
+
+            document.getElementById('modal-berita-content').innerHTML = `
+                <span class="px-3 py-1 bg-brand-50 text-brand-700 text-xs font-bold rounded-full border border-brand-200">${berita.kategori}</span>
+                <h3 class="text-2xl font-extrabold text-slate-900 mt-3 mb-2">${berita.judul}</h3>
+                <p class="text-xs text-slate-400 mb-4"><i class="fa-regular fa-calendar mr-1"></i> ${berita.tanggal}</p>
+                <img src="${berita.gambar}" alt="${berita.judul}" class="w-full h-64 object-cover rounded-2xl mb-4 border border-slate-200">
+                <p class="text-xs text-slate-700 leading-relaxed whitespace-pre-line">${berita.isi}</p>
+            `;
+            document.getElementById('modal-berita').classList.remove('hidden');
+        }
+
+        function closeModalBerita() { document.getElementById('modal-berita').classList.add('hidden'); }
+        function openLightbox(url, title, category) {
+            document.getElementById('lightbox-img').src = url;
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('lightbox-category').innerText = category;
+            document.getElementById('modal-lightbox').classList.remove('hidden');
+        }
+        function closeLightbox() { document.getElementById('modal-lightbox').classList.add('hidden'); }
+        function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
 
         function switchAdminTab(tabName) {
             document.querySelectorAll('.admin-tab-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-700', 'text-white', 'active');
-            });
-            document.querySelectorAll('.admin-tab-content').forEach(content => {
-                content.classList.add('hidden');
-            });
-
-            document.getElementById(`tab-btn-${tabName}`).classList.add('bg-brand-700', 'text-white', 'active');
-            document.getElementById(`admin-tab-${tabName}`).classList.remove('hidden');
-        }
-
-        /* ADMIN ORG ACTIONS */
-        function openOrgFormModal(editIdx = -1) {
-            document.getElementById('org-edit-index').value = editIdx;
-            if (editIdx >= 0) {
-                const item = state.org[editIdx];
-                document.getElementById('org-form-title').innerText = "Edit Pengurus";
-                document.getElementById('org-input-name').value = item.name;
-                document.getElementById('org-input-role').value = item.role;
-                document.getElementById('org-input-tier').value = item.tier;
-                document.getElementById('org-input-photo').value = item.photo;
-            } else {
-                document.getElementById('org-form-title').innerText = "Tambah Pengurus";
-                document.getElementById('org-input-name').value = "";
-                document.getElementById('org-input-role').value = "";
-                document.getElementById('org-input-photo').value = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80";
-            }
-            document.getElementById('org-form-modal').classList.remove('hidden');
-        }
-
-        function closeOrgFormModal() {
-            document.getElementById('org-form-modal').classList.add('hidden');
-        }
-
-        function saveOrgMember() {
-            const idx = parseInt(document.getElementById('org-edit-index').value);
-            const newItem = {
-                name: document.getElementById('org-input-name').value || "Pengurus Baru",
-                role: document.getElementById('org-input-role').value || "Anggota",
-                tier: document.getElementById('org-input-tier').value,
-                photo: document.getElementById('org-input-photo').value || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
-            };
-
-            if (idx >= 0) {
-                state.org[idx] = newItem;
-            } else {
-                state.org.push(newItem);
-            }
-
-            saveStateToStorage('8vibes_org', state.org);
-            closeOrgFormModal();
-            showToast('Data Pengurus berhasil disimpan!');
-        }
-
-        function editOrgMember(idx) {
-            openOrgFormModal(idx);
-        }
-
-        function deleteOrgMember(idx) {
-            if (confirm('Hapus pengurus ini?')) {
-                state.org.splice(idx, 1);
-                saveStateToStorage('8vibes_org', state.org);
-                showToast('Pengurus dihapus.');
-            }
-        }
-
-        /* ADMIN NEWS ACTIONS */
-        function openNewsFormModal(editIdx = -1) {
-            document.getElementById('news-edit-index').value = editIdx;
-            if (editIdx >= 0) {
-                const item = state.news[editIdx];
-                document.getElementById('news-form-title').innerText = "Edit Berita";
-                document.getElementById('news-input-title').value = item.title;
-                document.getElementById('news-input-category').value = item.category;
-                document.getElementById('news-input-date').value = item.date;
-                document.getElementById('news-input-image').value = item.image;
-                document.getElementById('news-input-content').value = item.content;
-            } else {
-                document.getElementById('news-form-title').innerText = "Tambah Berita Baru";
-                document.getElementById('news-input-title').value = "";
-                document.getElementById('news-input-date').value = "5 Oktober 2026";
-                document.getElementById('news-input-image').value = "https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80";
-                document.getElementById('news-input-content').value = "";
-            }
-            document.getElementById('news-form-modal').classList.remove('hidden');
-        }
-
-        function closeNewsFormModal() {
-            document.getElementById('news-form-modal').classList.add('hidden');
-        }
-
-        function saveNewsArticle() {
-            const idx = parseInt(document.getElementById('news-edit-index').value);
-            const newItem = {
-                title: document.getElementById('news-input-title').value || "Judul Berita",
-                category: document.getElementById('news-input-category').value,
-                date: document.getElementById('news-input-date').value || "5 Oktober 2026",
-                image: document.getElementById('news-input-image').value || "https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=800&q=80",
-                content: document.getElementById('news-input-content').value || "Deskripsi berita..."
-            };
-
-            if (idx >= 0) {
-                state.news[idx] = newItem;
-            } else {
-                state.news.unshift(newItem);
-            }
-
-            saveStateToStorage('8vibes_news', state.news);
-            closeNewsFormModal();
-            showToast('Berita berhasil disimpan!');
-        }
-
-        function editNewsArticle(idx) {
-            openNewsFormModal(idx);
-        }
-
-        function deleteNewsArticle(idx) {
-            if (confirm('Hapus berita ini?')) {
-                state.news.splice(idx, 1);
-                saveStateToStorage('8vibes_news', state.news);
-                showToast('Berita dihapus.');
-            }
-        }
-
-        /* ADMIN GALLERY ACTIONS */
-        function openGalleryFormModal() {
-            document.getElementById('gallery-form-modal').classList.remove('hidden');
-        }
-
-        function closeGalleryFormModal() {
-            document.getElementById('gallery-form-modal').classList.add('hidden');
-        }
-
-        function saveGalleryPhoto() {
-            const newItem = {
-                caption: document.getElementById('gallery-input-caption').value || "Dokumentasi Kegiatan",
-                category: document.getElementById('gallery-input-category').value,
-                image: document.getElementById('gallery-input-url').value || "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80"
-            };
-
-            state.gallery.unshift(newItem);
-            saveStateToStorage('8vibes_gallery', state.gallery);
-            closeGalleryFormModal();
-            showToast('Foto berhasil ditambahkan ke galeri!');
-        }
-
-        function deleteGalleryPhoto(idx) {
-            if (confirm('Hapus foto ini dari galeri?')) {
-                state.gallery.splice(idx, 1);
-                saveStateToStorage('8vibes_gallery', state.gallery);
-                showToast('Foto dihapus.');
-            }
-        }
-
-        /* ADMIN DONATION & SETTINGS ACTIONS */
-        function saveDonationSettings() {
-            state.donations.target = parseInt(document.getElementById('admin-target-amount-input').value) || 10000000;
-            state.donations.collected = parseInt(document.getElementById('admin-collected-amount-input').value) || 0;
-            state.donations.bca = document.getElementById('admin-bca-input').value;
-            state.donations.mandiri = document.getElementById('admin-mandiri-input').value;
-
-            saveStateToStorage('8vibes_donations', state.donations);
-            showToast('Pengaturan Donasi disimpan!');
-        }
-
-        function addManualDonor() {
-            const name = document.getElementById('admin-manual-donor-name').value.trim();
-            const amount = parseInt(document.getElementById('admin-manual-donor-amount').value) || 0;
-
-            if (!name || amount <= 0) {
-                showToast('Masukkan nama dan nominal valid.');
-                return;
-            }
-
-            state.donations.collected += amount;
-            state.donations.donors.unshift({
-                name: name,
-                amount: amount,
-                date: "Baru saja"
+                if (btn.dataset.tab === tabName) {
+                    btn.className = "admin-tab-btn active w-full px-3.5 py-2.5 rounded-xl text-xs font-bold text-left flex items-center gap-3 transition-all bg-brand-600 text-white shadow-sm";
+                } else {
+                    btn.className = "admin-tab-btn w-full px-3.5 py-2.5 rounded-xl text-xs font-bold text-left flex items-center gap-3 transition-all text-slate-600 hover:bg-slate-200/80";
+                }
             });
 
-            saveStateToStorage('8vibes_donations', state.donations);
-            document.getElementById('admin-manual-donor-name').value = '';
-            document.getElementById('admin-manual-donor-amount').value = '';
-            showToast('Donasi manual berhasil dicatat!');
+            document.querySelectorAll('.admin-content').forEach(content => content.classList.add('hidden'));
+            const targetTab = document.getElementById(`admin-tab-${tabName}`);
+            if (targetTab) targetTab.classList.remove('hidden');
         }
 
-        function saveSiteSettings() {
-            state.settings.siteName = document.getElementById('admin-site-name-input').value;
-            state.settings.siteRt = document.getElementById('admin-site-rt-input').value;
-            state.settings.heroTitle = document.getElementById('admin-hero-title-input').value;
-            state.settings.heroSubtitle = document.getElementById('admin-hero-subtitle-input').value;
-            state.settings.waHotline = document.getElementById('admin-wa-hotline-input').value;
-            state.settings.address = document.getElementById('admin-address-input').value;
-
-            saveStateToStorage('8vibes_settings', state.settings);
-            showToast('Pengaturan Website diperbarui!');
-        }
-
-        /* PUBLIC INTERACTION HELPERS */
-        function openNewsModal(index) {
-            const item = state.news[index];
-            if (!item) return;
-
-            document.getElementById('modal-news-title').innerText = item.title;
-            document.getElementById('modal-news-category').innerText = item.category;
-            document.getElementById('modal-news-date').innerHTML = `<i class="fa-regular fa-calendar mr-1"></i> ${item.date}`;
-            document.getElementById('modal-news-image').src = item.image;
-            document.getElementById('modal-news-content').innerText = item.content;
-
-            document.getElementById('news-modal').classList.remove('hidden');
-        }
-
-        function closeNewsModal() {
-            document.getElementById('news-modal').classList.add('hidden');
-        }
-
-        function openLightbox(imgSrc, caption) {
-            document.getElementById('lightbox-img').src = imgSrc;
-            document.getElementById('lightbox-caption').innerText = caption;
-            document.getElementById('lightbox-modal').classList.remove('hidden');
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox-modal').classList.add('hidden');
-        }
-
-        function setDonationPreset(amount) {
-            document.getElementById('donor-amount-input').value = amount;
-        }
-
-        function submitDonationViaWA() {
-            const name = document.getElementById('donor-name-input').value.trim() || "Hamba Allah";
-            const amount = document.getElementById('donor-amount-input').value.trim();
-
-            if (!amount) {
-                showToast('Harap masukkan nominal donasi.');
-                return;
-            }
-
-            const cleanPhone = state.settings.waHotline.replace(/[^0-9]/g, '');
-            const formattedAmount = parseInt(amount).toLocaleString('id-ID');
-            const message = `Halo Pengurus Karang Taruna ${state.settings.siteRt},%0A%0ASaya ingin konfirmasi donasi program pemuda:%0A- *Nama Donatur:* ${encodeURIComponent(name)}%0A- *Nominal:* Rp ${formattedAmount}%0A%0AMohon bantuan rekap donasi. Terima kasih!`;
+        function populateAdminForms() {
+            const data = getAppData();
             
-            window.open(`https://wa.me/${cleanPhone}?text=${message}`, '_blank');
+            // Donasi
+            document.getElementById('admin-donasi-judul').value = data.donasi.judul;
+            document.getElementById('admin-donasi-deskripsi').value = data.donasi.deskripsi;
+            document.getElementById('admin-donasi-target').value = data.donasi.target;
+            document.getElementById('admin-donasi-terkumpul').value = data.donasi.terkumpul;
+            document.getElementById('admin-donasi-rekening').value = data.donasi.rekening;
+            document.getElementById('admin-donasi-qris').value = data.donasi.qrisUrl;
+
+            // Media
+            document.getElementById('admin-slogan').value = data.slogan;
+            document.getElementById('admin-logo-url').value = data.logoUrl;
+            document.getElementById('admin-hero-img-url').value = data.heroBannerUrl;
+
+            // Sosmed
+            const sos = data.sosmed;
+            if (sos) {
+                Object.keys(sos).forEach(key => {
+                    const urlEl = document.getElementById(`sosmed-url-${key}`);
+                    const activeEl = document.getElementById(`sosmed-active-${key}`);
+                    if (urlEl) urlEl.value = sos[key].url || '';
+                    if (activeEl) activeEl.checked = !!sos[key].active;
+                });
+            }
         }
 
-        function handleContactForm(e) {
+        function renderAdminTables(data) {
+            // Table Struktur
+            const elStruktur = document.getElementById('admin-table-struktur');
+            if (elStruktur) {
+                elStruktur.innerHTML = data.struktur.map(s => `
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3"><img src="${s.foto}" class="w-8 h-8 rounded-full object-cover"></td>
+                        <td class="p-3 font-bold text-slate-800">${s.nama}</td>
+                        <td class="p-3">${s.jabatan}</td>
+                        <td class="p-3 text-slate-500">${s.instagram || '-'}</td>
+                        <td class="p-3 text-right">
+                            <button onclick="deleteStruktur(${s.id})" class="text-red-600 hover:text-red-800 font-bold"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `).join('');
+            }
+
+            // Table Berita
+            const elBerita = document.getElementById('admin-table-berita');
+            if (elBerita) {
+                elBerita.innerHTML = data.berita.map(b => `
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3"><img src="${b.gambar}" class="w-10 h-8 rounded object-cover"></td>
+                        <td class="p-3 font-bold text-slate-800 line-clamp-1">${b.judul}</td>
+                        <td class="p-3"><span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold">${b.kategori}</span></td>
+                        <td class="p-3 text-slate-400 text-[11px]">${b.tanggal}</td>
+                        <td class="p-3 text-right">
+                            <button onclick="deleteBerita(${b.id})" class="text-red-600 hover:text-red-800 font-bold"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `).join('');
+            }
+
+            // Table Galeri
+            const elGaleri = document.getElementById('admin-table-galeri');
+            if (elGaleri) {
+                elGaleri.innerHTML = data.galeri.map(g => `
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-3"><img src="${g.url}" class="w-10 h-8 rounded object-cover"></td>
+                        <td class="p-3 font-bold text-slate-800">${g.judul}</td>
+                        <td class="p-3"><span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold">${g.kategori}</span></td>
+                        <td class="p-3 text-right">
+                            <button onclick="deleteGaleri(${g.id})" class="text-red-600 hover:text-red-800 font-bold"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `).join('');
+            }
+        }
+
+        // CRUD Helpers
+        function openFormStruktur() { document.getElementById('form-struktur').classList.remove('hidden'); }
+        function closeFormStruktur() { document.getElementById('form-struktur').classList.add('hidden'); }
+        function saveStruktur(e) {
             e.preventDefault();
-            const name = document.getElementById('contact-name').value;
-            const phone = document.getElementById('contact-phone').value;
-            const msg = document.getElementById('contact-message').value;
-
-            const cleanPhone = state.settings.waHotline.replace(/[^0-9]/g, '');
-            const text = `Pesan Warga/Aspirasi RT 08:%0A- *Nama:* ${encodeURIComponent(name)}%0A- *No WA:* ${encodeURIComponent(phone)}%0A- *Pesan:* ${encodeURIComponent(msg)}`;
-
-            window.open(`https://wa.me/${cleanPhone}?text=${text}`, '_blank');
-        }
-
-        function copyToClipboard(text, typeName) {
-            const dummy = document.createElement("textarea");
-            document.body.appendChild(dummy);
-            dummy.value = text;
-            dummy.select();
-            document.execCommand("copy");
-            document.body.removeChild(dummy);
-
-            showToast(`${typeName} (${text}) berhasil disalin!`);
-        }
-
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toast-message').innerText = msg;
-            toast.classList.remove('hidden');
-
-            setTimeout(() => {
-                toast.classList.add('hidden');
-            }, 3000);
-        }
-
-        // Mobile Menu Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.add('hidden');
+            const data = getAppData();
+            data.struktur.push({
+                id: Date.now(),
+                nama: document.getElementById('input-struktur-nama').value,
+                jabatan: document.getElementById('input-struktur-jabatan').value,
+                foto: document.getElementById('input-struktur-foto').value,
+                instagram: document.getElementById('input-struktur-instagram').value
             });
-        });
+            saveAppData(data);
+            closeFormStruktur();
+            document.getElementById('form-struktur').reset();
+        }
+        function deleteStruktur(id) {
+            const data = getAppData();
+            data.struktur = data.struktur.filter(s => s.id !== id);
+            saveAppData(data);
+        }
 
-        // Initialize App on Page Load
+        function openFormBerita() { document.getElementById('form-berita').classList.remove('hidden'); }
+        function closeFormBerita() { document.getElementById('form-berita').classList.add('hidden'); }
+        function saveBerita(e) {
+            e.preventDefault();
+            const data = getAppData();
+            const today = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+            data.berita.unshift({
+                id: Date.now(),
+                judul: document.getElementById('input-berita-judul').value,
+                kategori: document.getElementById('input-berita-kategori').value,
+                gambar: document.getElementById('input-berita-gambar').value,
+                isi: document.getElementById('input-berita-isi').value,
+                tanggal: today
+            });
+            saveAppData(data);
+            closeFormBerita();
+            document.getElementById('form-berita').reset();
+        }
+        function deleteBerita(id) {
+            const data = getAppData();
+            data.berita = data.berita.filter(b => b.id !== id);
+            saveAppData(data);
+        }
+
+        function openFormGaleri() { document.getElementById('form-galeri').classList.remove('hidden'); }
+        function closeFormGaleri() { document.getElementById('form-galeri').classList.add('hidden'); }
+        function saveGaleri(e) {
+            e.preventDefault();
+            const data = getAppData();
+            data.galeri.unshift({
+                id: Date.now(),
+                judul: document.getElementById('input-galeri-judul').value,
+                kategori: document.getElementById('input-galeri-kategori').value,
+                url: document.getElementById('input-galeri-url').value
+            });
+            saveAppData(data);
+            closeFormGaleri();
+            document.getElementById('form-galeri').reset();
+        }
+        function deleteGaleri(id) {
+            const data = getAppData();
+            data.galeri = data.galeri.filter(g => g.id !== id);
+            saveAppData(data);
+        }
+
+        function saveDonasiSettings(e) {
+            e.preventDefault();
+            const data = getAppData();
+            data.donasi = {
+                judul: document.getElementById('admin-donasi-judul').value,
+                deskripsi: document.getElementById('admin-donasi-deskripsi').value,
+                target: parseInt(document.getElementById('admin-donasi-target').value),
+                terkumpul: parseInt(document.getElementById('admin-donasi-terkumpul').value),
+                rekening: document.getElementById('admin-donasi-rekening').value,
+                qrisUrl: document.getElementById('admin-donasi-qris').value
+            };
+            saveAppData(data);
+            alert("Pengaturan Donasi Berhasil Diperbarui!");
+        }
+
+        function saveSosmedSettings(e) {
+            e.preventDefault();
+            const data = getAppData();
+
+            if (!data.sosmed) data.sosmed = initialData.sosmed;
+
+            Object.keys(data.sosmed).forEach(key => {
+                const urlVal = document.getElementById(`sosmed-url-${key}`).value;
+                const activeVal = document.getElementById(`sosmed-active-${key}`).checked;
+                data.sosmed[key].url = urlVal;
+                data.sosmed[key].active = activeVal;
+            });
+
+            saveAppData(data);
+            alert("Pengaturan Sosial Media Berhasil Diperbarui!");
+        }
+
+        function saveMediaSettings(e) {
+            e.preventDefault();
+            const data = getAppData();
+            data.slogan = document.getElementById('admin-slogan').value;
+            data.logoUrl = document.getElementById('admin-logo-url').value;
+            data.heroBannerUrl = document.getElementById('admin-hero-img-url').value;
+            saveAppData(data);
+            alert("Gambar & Slogan Web Berhasil Diperbarui!");
+        }
+
         window.onload = function() {
-            loadApplicationState();
+            renderAllViews();
         };
     </script>
 </body>
